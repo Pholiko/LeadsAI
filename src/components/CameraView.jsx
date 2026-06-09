@@ -37,11 +37,24 @@ export default function CameraView({ onCapture, onCancel }) {
     if (videoRef.current && canvasRef.current) {
       const video = videoRef.current;
       const canvas = canvasRef.current;
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
+      
+      // Bild verkleinern (Max 1080p), um Browser-Abstürze und Payload-Limits zu verhindern
+      const MAX_WIDTH = 1080;
+      let width = video.videoWidth;
+      let height = video.videoHeight;
+      
+      if (width > MAX_WIDTH) {
+        height = Math.round(height * (MAX_WIDTH / width));
+        width = MAX_WIDTH;
+      }
+
+      canvas.width = width;
+      canvas.height = height;
       const ctx = canvas.getContext('2d');
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      const imageDataUrl = canvas.toDataURL('image/jpeg', 0.8);
+      ctx.drawImage(video, 0, 0, width, height);
+      
+      // Komprimierung auf 0.7 reduziert für schnellere Uploads
+      const imageDataUrl = canvas.toDataURL('image/jpeg', 0.7);
       onCapture(imageDataUrl);
     }
   };

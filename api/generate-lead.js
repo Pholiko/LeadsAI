@@ -1,61 +1,28 @@
-import express from 'express';
-import cors from 'cors';
-import multer from 'multer';
-import * as dotenv from 'dotenv';
 import OpenAI from 'openai';
-import { toFile } from 'openai';
 
-// Lade .env.local Variablen
-dotenv.config({ path: '.env.local' });
-
-const app = express();
-const port = 3000;
-
-app.use(cors());
-app.use(express.json({ limit: '10mb' }));
-
-const upload = multer();
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+  },
+};
 
 const openai = new OpenAI({
   apiKey: process.env.VITE_OPENAI_API_KEY,
 });
 
-const checkAuth = () => {
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+
   if (!process.env.VITE_OPENAI_API_KEY || process.env.VITE_OPENAI_API_KEY.includes('DEIN_API_KEY')) {
-    throw new Error("Backend: OpenAI API Key fehlt in der .env.local Datei.");
+    return res.status(500).json({ error: "OpenAI API Key fehlt in den Vercel Environment Variables." });
   }
-};
 
-app.post('/api/transcribe', upload.single('audio'), async (req, res) => {
   try {
-    checkAuth();
-    const audioFile = req.file;
-    if (!audioFile) throw new Error("Kein Audio empfangen");
-
-    console.log("Backend: Transkribiere Audio...");
-    const file = await toFile(audioFile.buffer, 'audio.webm', { type: audioFile.mimetype });
-    
-    const transcription = await openai.audio.transcriptions.create({
-      file: file,
-      model: 'whisper-1',
-      language: 'de'
-    });
-    console.log("Backend: Transkription erfolgreich.");
-    res.json({ transcript: transcription.text });
-  } catch (error) {
-    console.error("Backend Error:", error);
-    res.status(500).json({ error: error.message || "Fehler bei der Transkription" });
-  }
-});
-
-app.post('/api/generate-lead', async (req, res) => {
-  try {
-    checkAuth();
     const { photoUrl, transcript, userName } = req.body;
     const authorName = userName || 'dem Vertriebsmitarbeiter';
 
-    console.log("Backend: Analysiere Lead mit GPT-4o...");
-    
     const systemPrompt = `
 Du bist ein erstklassiger B2B-Sales-Assistent. 
 Deine Aufgabe ist es, aus einer Visitenkarte (Bild) und einer gesprochenen Notiz (Text) einen strukturierten Datensatz und eine Follow-up E-Mail zu generieren.
@@ -98,14 +65,9 @@ Antworte AUSSCHLIESSLICH mit einem validen JSON-Objekt im folgenden Format:
       messages: messages
     });
 
-    const resultJson = completion.choices[0].message.content;
-    res.json(JSON.parse(resultJson));
+    res.status(200).json(JSON.parse(completion.choices[0].message.content));
   } catch (error) {
-    console.error("Backend Error:", error);
+    console.error("Vercel Function Error (Generate):", error);
     res.status(500).json({ error: error.message || "Fehler bei der Lead-Generierung" });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Backend Proxy läuft auf http://localhost:${port}`);
-});
+}

@@ -1,16 +1,32 @@
+// Hilfsfunktion: Wandelt Audio-Blob in Base64 um
+const blobToBase64 = (blob) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+};
+
 export const transcribeAudio = async (audioBlobUrl) => {
-  const formData = new FormData();
-  
   if (!audioBlobUrl) return "";
 
   const audioBlob = await fetch(audioBlobUrl).then(r => r.blob());
-  formData.append('audio', audioBlob, 'audio.webm');
+  const audioBase64 = await blobToBase64(audioBlob);
 
-  console.log("Sende Audio an lokales Backend...");
+  const payload = {
+    audioBase64: audioBase64,
+    mimeType: audioBlob.type
+  };
+
+  console.log("Sende Audio an Vercel Serverless Function...");
 
   const response = await fetch('/api/transcribe', {
     method: 'POST',
-    body: formData 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload) 
   });
 
   if (!response.ok) {
@@ -24,7 +40,7 @@ export const transcribeAudio = async (audioBlobUrl) => {
 };
 
 export const generateLead = async (photoUrl, transcript, userName) => {
-  console.log("Generiere Lead mit Backend...");
+  console.log("Generiere Lead mit Vercel Serverless Function...");
 
   const payload = {
     photoUrl: photoUrl || null,
