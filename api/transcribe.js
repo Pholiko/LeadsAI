@@ -9,18 +9,18 @@ export const config = {
   },
 };
 
-const openai = new OpenAI({
-  apiKey: process.env.VITE_OPENAI_API_KEY,
-});
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   
-  if (!process.env.VITE_OPENAI_API_KEY || process.env.VITE_OPENAI_API_KEY.includes('DEIN_API_KEY')) {
-    return res.status(500).json({ error: "OpenAI API Key fehlt in den Vercel Environment Variables." });
+  const apiKey = process.env.VITE_OPENAI_API_KEY;
+
+  if (!apiKey || apiKey.includes('DEIN_API_KEY')) {
+    return res.status(500).json({ error: "OpenAI API Key fehlt in den Vercel Environment Variables. Bitte trage ihn im Vercel Dashboard unter Settings -> Environment Variables ein und klicke auf Redeploy." });
   }
 
   try {
+    const openai = new OpenAI({ apiKey });
+
     const { audioBase64, mimeType } = req.body;
     if (!audioBase64) return res.status(400).json({ error: 'Kein Audio empfangen' });
 
