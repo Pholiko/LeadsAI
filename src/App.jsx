@@ -92,6 +92,12 @@ export default function App() {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('app_pin');
+    setIsAuthenticated(false);
+    setShowLanding(true);
+  };
+
   if (!isAuthenticated) {
     if (showLanding) {
       return <LandingView onStart={() => setShowLanding(false)} />;
@@ -120,7 +126,7 @@ export default function App() {
 
   return (
     <main style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-      {step === 0 && <DashboardView onCaptureNew={() => setStep(1)} />}
+      {step === 0 && <DashboardView onCaptureNew={() => setStep(1)} onLogout={handleLogout} />}
       
       {step === 1 && (
         <CameraView 

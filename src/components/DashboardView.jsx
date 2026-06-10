@@ -7,7 +7,7 @@ const PRIORITY_COLORS = {
   COLD: { bg: 'rgba(59, 130, 246, 0.2)', text: '#3b82f6', emoji: '❄️' }
 };
 
-export default function DashboardView({ onCaptureNew }) {
+export default function DashboardView({ onCaptureNew, onLogout }) {
   const [leads, setLeads] = useState([]);
   const [filter, setFilter] = useState('ALL');
   const [expandedId, setExpandedId] = useState(null);
@@ -67,10 +67,15 @@ export default function DashboardView({ onCaptureNew }) {
 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '16px' }}>
-        <div>
-          <h1 className="title" style={{ fontSize: '2rem', textAlign: 'center', margin: 0 }}>Lead AI</h1>
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+        <div style={{ width: '40px' }}></div> {/* Spacer */}
+        <h1 className="title" style={{ fontSize: '2rem', textAlign: 'center', margin: 0 }}>Lead AI</h1>
+        <button 
+          onClick={onLogout} 
+          style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: '0.85rem', width: '40px', textAlign: 'right' }}
+        >
+          Logout
+        </button>
       </div>
 
       <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
