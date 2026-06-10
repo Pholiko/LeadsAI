@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react'
 import CameraView from './components/CameraView'
 import AudioView from './components/AudioView'
 import DashboardView from './components/DashboardView'
+import LandingView from './components/LandingView'
 import { transcribeAudio, generateLead } from './services/openaiApi'
 import { saveLead } from './services/storage'
 
 export default function App() {
+  const [showLanding, setShowLanding] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [pinInput, setPinInput] = useState('');
   
@@ -18,6 +20,7 @@ export default function App() {
     const savedPin = localStorage.getItem('app_pin');
     if (savedPin === '8765') {
       setIsAuthenticated(true);
+      setShowLanding(false); // Skip landing if already logged in
     }
   }, []);
 
@@ -90,6 +93,10 @@ export default function App() {
   };
 
   if (!isAuthenticated) {
+    if (showLanding) {
+      return <LandingView onStart={() => setShowLanding(false)} />;
+    }
+
     return (
       <main style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <h1 className="title" style={{ marginBottom: '24px' }}>Lead AI</h1>
