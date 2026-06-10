@@ -12,7 +12,7 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Hero Section (Above the fold) */}
-      <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.5s ease' }}>
+      <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', animation: 'fadeIn 0.5s ease' }}>
         
         {/* CSS "Screenshot/Notification" Widget instead of image */}
         <div style={{ 
@@ -25,23 +25,24 @@ export default function LandingView({ onStart }) {
             display: 'flex',
             alignItems: 'center',
             gap: '16px',
-            backdropFilter: 'blur(10px)'
+            backdropFilter: 'blur(10px)',
+            maxWidth: '350px'
           }}>
           <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
             ✓
           </div>
-          <div>
+          <div style={{ textAlign: 'left' }}>
             <p style={{ margin: '0 0 4px', fontSize: '0.9rem', fontWeight: 'bold' }}>Lead gesichert & E-Mail versendet</p>
             <p style={{ margin: 0, fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
           </div>
         </div>
 
-        <h1 className="title" style={{ fontSize: '2.8rem', marginBottom: '16px', lineHeight: '1.1', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
-          Lead-Erfassung in <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Echtzeit.</span>
+        <h1 className="title" style={{ fontSize: '2.8rem', marginBottom: '16px', lineHeight: '1.1', fontWeight: '800', textAlign: 'center', letterSpacing: '-1px' }}>
+          Lead-Erfassung in <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Echtzeit.</span>
         </h1>
         
-        <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.5' }}>
-          Messen sind teuer. Maximieren Sie Ihren ROI. Erfassen Sie Kontakte in 10 Sekunden und versenden Sie hochpersonalisierte Follow-ups – noch am selben Tag.
+        <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.7)', textAlign: 'center', lineHeight: '1.5' }}>
+          Jeder aufgeschobene Lead ist bares Geld, das Sie der Konkurrenz überlassen. Während andere abends noch Visitenkarten abtippen, schicken Sie schon am Messe-Stand das perfekte Follow-up raus.
         </p>
 
         <button 
