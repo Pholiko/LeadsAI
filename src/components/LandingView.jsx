@@ -2,75 +2,92 @@ import React from 'react';
 
 export default function LandingView({ onStart }) {
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px', textAlign: 'center', animation: 'fadeIn 0.5s ease' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: 'var(--bg-color)', overflowY: 'auto', paddingBottom: '40px' }}>
       
-      <img 
-        src="/hero-mockup.png" 
-        alt="Lead AI Dashboard Mockup" 
-        style={{ width: '100%', maxWidth: '350px', borderRadius: '24px', marginBottom: '32px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }} 
-      />
+      {/* Top Bar */}
+      <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.5px' }}>
+          Lead <span style={{ color: 'var(--primary)' }}>AI</span>
+        </div>
+      </div>
 
-      <h1 className="title" style={{ fontSize: '2.2rem', marginBottom: '16px', lineHeight: '1.2' }}>
-        Lead-Erfassung in Echtzeit. <br />Ohne Datenverlust.
-      </h1>
-      
-      <p className="subtitle" style={{ fontSize: '1.05rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.8)' }}>
-        Messen sind kostenintensiv. Sichern Sie sich den maximalen ROI aus jedem Kontakt. Erfassen Sie Leads in Sekunden und versenden Sie hochpersonalisierte Follow-ups – während Ihr Wettbewerb noch Visitenkarten abtippt.
-      </p>
-
-      <div style={{ width: '100%', maxWidth: '350px', marginBottom: '40px', textAlign: 'left' }}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '24px', textAlign: 'center', color: 'rgba(255,255,255,0.9)', fontWeight: '600' }}>
-          In 3 simplen Schritten:
-        </h2>
+      {/* Hero Section (Above the fold) */}
+      <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.5s ease' }}>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {/* CSS "Screenshot/Notification" Widget instead of image */}
+        <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)', 
+            border: '1px solid rgba(255, 255, 255, 0.1)', 
+            borderRadius: '16px', 
+            padding: '16px', 
+            marginBottom: '32px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '16px',
+            backdropFilter: 'blur(10px)'
+          }}>
+          <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+            ✓
+          </div>
+          <div>
+            <p style={{ margin: '0 0 4px', fontSize: '0.9rem', fontWeight: 'bold' }}>Lead gesichert & E-Mail versendet</p>
+            <p style={{ margin: 0, fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
+          </div>
+        </div>
+
+        <h1 className="title" style={{ fontSize: '2.8rem', marginBottom: '16px', lineHeight: '1.1', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
+          Lead-Erfassung in <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Echtzeit.</span>
+        </h1>
+        
+        <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.5' }}>
+          Messen sind teuer. Maximieren Sie Ihren ROI. Erfassen Sie Kontakte in 10 Sekunden und versenden Sie hochpersonalisierte Follow-ups – noch am selben Tag.
+        </p>
+
+        <button 
+          className="btn-primary" 
+          onClick={onStart}
+          style={{ padding: '18px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '300px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
+        >
+          Jetzt App Starten
+        </button>
+      </div>
+
+      {/* Process Section (Below the fold) */}
+      <div style={{ padding: '24px', marginTop: '24px' }}>
+        <p style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>So funktioniert's</p>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', paddingLeft: '16px' }}>
           
-          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.1s', position: 'relative' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+          {/* Vertical Timeline Line */}
+          <div style={{ position: 'absolute', left: '26px', top: '20px', bottom: '20px', width: '2px', background: 'rgba(255,255,255,0.1)' }}></div>
+
+          <div style={{ display: 'flex', gap: '20px', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
+            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>1</div>
             <div>
-              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>📸 Karte Scannen</h3>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>KI liest präzise alle Kontaktdaten aus.</p>
+              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Karte Scannen</h3>
+              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest präzise Namen, Firma und alle Kontaktdaten aus der Visitenkarte.</p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.5 }}>
-            <div style={{ width: '2px', height: '16px', background: 'var(--primary)' }}></div>
-          </div>
-
-          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.2s' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+          <div style={{ display: 'flex', gap: '20px', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
+            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>2</div>
             <div>
-              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>🎙️ Kontext einsprechen</h3>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Einfach kurz zusammenfassen, worum es ging.</p>
+              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Kontext einsprechen</h3>
+              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Sprechen Sie kurz ein, worum es im Gespräch ging. Die KI extrahiert die relevanten Sales-Insights.</p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.5 }}>
-            <div style={{ width: '2px', height: '16px', background: 'var(--primary)' }}></div>
-          </div>
-
-          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.3s' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+          <div style={{ display: 'flex', gap: '20px', position: 'relative', zIndex: 1 }}>
+            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>3</div>
             <div>
-              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>⚡ E-Mail versenden</h3>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Die perfekt personalisierte Mail geht in Minuten raus.</p>
+              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>E-Mail versenden</h3>
+              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die perfekt personalisierte E-Mail direkt an den Kunden raus.</p>
             </div>
           </div>
 
         </div>
       </div>
-
-      <button 
-        className="btn-primary" 
-        onClick={onStart}
-        style={{ padding: '18px 32px', fontSize: '1.2rem', width: '100%', maxWidth: '350px', borderRadius: '16px' }}
-      >
-        App Starten
-      </button>
-
-      <p style={{ marginTop: '24px', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-        Beta-Zugang nur mit Einladungscode.
-      </p>
 
     </div>
   );
