@@ -65,7 +65,14 @@ Antworte AUSSCHLIESSLICH mit einem validen JSON-Objekt im folgenden Format:
       messages: messages
     });
 
-    res.status(200).json(JSON.parse(completion.choices[0].message.content));
+    const content = completion.choices[0].message.content;
+    const parsedData = JSON.parse(content);
+
+    if (!parsedData) {
+      throw new Error("OpenAI lieferte leeres JSON (null).");
+    }
+
+    res.status(200).json(parsedData);
   } catch (error) {
     console.error("Vercel Function Error (Generate):", error);
     res.status(500).json({ error: error.message || "Fehler bei der Lead-Generierung" });

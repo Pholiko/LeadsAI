@@ -65,7 +65,12 @@ export default function App() {
     
     try {
       const userName = localStorage.getItem('app_user_name') || '';
-      const processedData = await generateLead(leadInput.photo, leadInput.transcript, userName);
+      let processedData = await generateLead(leadInput.photo, leadInput.transcript, userName);
+      
+      if (!processedData) {
+        throw new Error("Die KI hat keine gültigen Daten (null) zurückgegeben. Bitte versuche es erneut.");
+      }
+
       processedData.priority = priorityValue;
       
       saveLead({ data: processedData });
