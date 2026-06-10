@@ -70,7 +70,13 @@ export default function App() {
       
       saveLead({ data: processedData });
       setCurrentLead({ photo: null, audio: null, transcript: '', priority: null });
-      setStep(0); // Back to dashboard
+      
+      // Erfolgs-Screen für 1.5 Sekunden anzeigen
+      setStep(7);
+      setTimeout(() => {
+        setStep(0);
+      }, 1500);
+      
     } catch (error) {
       console.error(error);
       alert(error.message || "Fehler bei der Verarbeitung");
@@ -119,8 +125,8 @@ export default function App() {
       )}
 
       {step === 3 && (
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="animate-pulse" style={{ fontSize: '64px', marginBottom: '24px' }}>🎧</div>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', animation: 'fadeIn 0.3s ease' }}>
+          <div className="spinner-ring"></div>
           <h2 className="title" style={{ textAlign: 'center' }}>Transkribiere Audio...</h2>
           <p className="subtitle" style={{ textAlign: 'center', maxWidth: '80%' }}>
             Whisper übersetzt deine Sprachnotiz in Text...
@@ -139,18 +145,22 @@ export default function App() {
               style={{
                 flex: 1,
                 background: 'rgba(0,0,0,0.2)',
-                border: '1px solid var(--primary)',
+                border: '1px solid rgba(255,255,255,0.1)',
                 color: 'white',
-                padding: '12px',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                minHeight: '200px'
+                padding: '16px',
+                borderRadius: '12px',
+                fontSize: '1.05rem',
+                minHeight: '200px',
+                lineHeight: '1.5',
+                transition: 'border-color 0.2s',
               }}
+              onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
+              onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
             />
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             <button className="btn-secondary" onClick={() => setStep(2)}>Zurück</button>
-            <button className="btn-primary" onClick={handleTranscriptSave}>Bestätigen & Weiter</button>
+            <button className="btn-primary" style={{ flex: 2 }} onClick={handleTranscriptSave}>Bestätigen & Weiter</button>
           </div>
         </div>
       )}
@@ -176,12 +186,21 @@ export default function App() {
       )}
       
       {step === 6 && (
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="animate-pulse" style={{ fontSize: '64px', marginBottom: '24px' }}>🤖</div>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', animation: 'fadeIn 0.3s ease' }}>
+          <div className="spinner-ring"></div>
           <h2 className="title" style={{ textAlign: 'center' }}>KI schreibt E-Mail...</h2>
           <p className="subtitle" style={{ textAlign: 'center', maxWidth: '80%' }}>
-            Lese Visitenkarte & verarbeite deine Notiz...
+            Visitenkarte & Notiz werden verarbeitet...
           </p>
+        </div>
+      )}
+
+      {step === 7 && (
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', animation: 'slideIn 0.4s ease' }}>
+          <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '40px', marginBottom: '24px' }}>
+            ✅
+          </div>
+          <h2 className="title" style={{ textAlign: 'center' }}>Lead gesichert!</h2>
         </div>
       )}
     </main>
