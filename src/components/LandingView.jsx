@@ -16,32 +16,46 @@ export default function LandingView({ onStart }) {
         Messen sind kostenintensiv. Sichern Sie sich den maximalen ROI aus jedem Kontakt. Erfassen Sie Leads in Sekunden und versenden Sie hochpersonalisierte Follow-ups – während Ihr Wettbewerb noch Visitenkarten abtippt.
       </p>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', maxWidth: '350px', marginBottom: '40px', textAlign: 'left' }}>
+      <div style={{ width: '100%', maxWidth: '350px', marginBottom: '40px', textAlign: 'left' }}>
+        <h2 style={{ fontSize: '1.2rem', marginBottom: '24px', textAlign: 'center', color: 'rgba(255,255,255,0.9)', fontWeight: '600' }}>
+          In 3 simplen Schritten:
+        </h2>
         
-        <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', animationDelay: '0.1s' }}>
-          <div style={{ fontSize: '1.5rem' }}>📸</div>
-          <div>
-            <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>KI-Visitenkarten Scanner</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Erkennt präzise Namen, Firma, Position und Kontaktdaten.</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.1s', position: 'relative' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>1</div>
+            <div>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>📸 Karte Scannen</h3>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>KI liest präzise alle Kontaktdaten aus.</p>
+            </div>
           </div>
-        </div>
 
-        <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', animationDelay: '0.2s' }}>
-          <div style={{ fontSize: '1.5rem' }}>🎙️</div>
-          <div>
-            <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>Smarte Sprachnotizen</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Sprechen Sie Kontext ein. Die KI extrahiert die relevanten Sales-Insights.</p>
+          <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.5 }}>
+            <div style={{ width: '2px', height: '16px', background: 'var(--primary)' }}></div>
           </div>
-        </div>
 
-        <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', animationDelay: '0.3s' }}>
-          <div style={{ fontSize: '1.5rem' }}>⚡</div>
-          <div>
-            <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>Sekundenschnelles Follow-up</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Innerhalb von Minuten die perfekt personalisierte E-Mail an den Kunden rausschicken.</p>
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.2s' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>2</div>
+            <div>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>🎙️ Kontext einsprechen</h3>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Einfach kurz zusammenfassen, worum es ging.</p>
+            </div>
           </div>
-        </div>
 
+          <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.5 }}>
+            <div style={{ width: '2px', height: '16px', background: 'var(--primary)' }}></div>
+          </div>
+
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '16px', animationDelay: '0.3s' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', flexShrink: 0 }}>3</div>
+            <div>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>⚡ E-Mail versenden</h3>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Die perfekt personalisierte Mail geht in Minuten raus.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <button 
