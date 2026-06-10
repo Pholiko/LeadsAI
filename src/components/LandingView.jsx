@@ -42,7 +42,7 @@ export default function LandingView({ onStart }) {
         </h1>
         
         <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.7)', textAlign: 'center', lineHeight: '1.5' }}>
-          Jeder aufgeschobene Lead ist bares Geld, das Sie der Konkurrenz überlassen. Während andere abends noch Visitenkarten abtippen, schicken Sie schon am Messe-Stand das perfekte Follow-up raus.
+          Jeder aufgeschobene Lead ist bares Geld, das Sie der Konkurrenz überlassen. Während andere abends noch Visitenkarten abtippen, schicken Sie schon am Messe-Stand die perfekt <strong>personalisierte</strong> E-Mail raus.
         </p>
 
         <button 
