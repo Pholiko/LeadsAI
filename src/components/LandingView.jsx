@@ -4,9 +4,11 @@ export default function LandingView({ onStart }) {
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px', textAlign: 'center', animation: 'fadeIn 0.5s ease' }}>
       
-      <div style={{ width: '80px', height: '80px', background: 'linear-gradient(135deg, var(--primary) 0%, #6366f1 100%)', borderRadius: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', marginBottom: '24px', boxShadow: '0 10px 25px rgba(59, 130, 246, 0.4)' }}>
-        🚀
-      </div>
+      <img 
+        src="/hero-mockup.png" 
+        alt="Lead AI Dashboard Mockup" 
+        style={{ width: '100%', maxWidth: '350px', borderRadius: '24px', marginBottom: '32px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }} 
+      />
 
       <h1 className="title" style={{ fontSize: '2.2rem', marginBottom: '16px', lineHeight: '1.2' }}>
         Lead-Erfassung in Echtzeit. <br />Ohne Datenverlust.
