@@ -9,11 +9,11 @@ export default function LandingView({ onStart }) {
       </div>
 
       <h1 className="title" style={{ fontSize: '2.2rem', marginBottom: '16px', lineHeight: '1.2' }}>
-        Kein Lead bleibt auf der Strecke.
+        Lead-Erfassung in Echtzeit. <br />Ohne Datenverlust.
       </h1>
       
-      <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.8)' }}>
-        Verlorene Leads = verpasster Umsatz. Erfasse Messekontakte in 10 Sekunden und melde dich noch am selben Tag mit dem perfekten Follow-up.
+      <p className="subtitle" style={{ fontSize: '1.05rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.8)' }}>
+        Messen sind kostenintensiv. Sichern Sie sich den maximalen ROI aus jedem Kontakt. Erfassen Sie Leads in Sekunden und versenden Sie hochpersonalisierte Follow-ups – während Ihr Wettbewerb noch Visitenkarten abtippt.
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', maxWidth: '350px', marginBottom: '40px', textAlign: 'left' }}>
@@ -22,15 +22,15 @@ export default function LandingView({ onStart }) {
           <div style={{ fontSize: '1.5rem' }}>📸</div>
           <div>
             <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>KI-Visitenkarten Scanner</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Erkennt sofort Namen, Firma und E-Mail.</p>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Erkennt präzise Namen, Firma, Position und Kontaktdaten.</p>
           </div>
         </div>
 
         <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', alignItems: 'center', gap: '12px', animationDelay: '0.2s' }}>
           <div style={{ fontSize: '1.5rem' }}>🎙️</div>
           <div>
-            <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>Sprachnotizen</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Einfach reinsprechen. Die KI transkribiert alles fehlerfrei.</p>
+            <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>Smarte Sprachnotizen</h3>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Sprechen Sie Kontext ein. Die KI extrahiert die relevanten Sales-Insights.</p>
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export default function LandingView({ onStart }) {
           <div style={{ fontSize: '1.5rem' }}>⚡</div>
           <div>
             <h3 style={{ margin: '0 0 4px', fontSize: '1rem' }}>Sekundenschnelles Follow-up</h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Innerhalb von Minuten die E-Mail an den Kunden rausschicken.</p>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Innerhalb von Minuten die perfekt personalisierte E-Mail an den Kunden rausschicken.</p>
           </div>
         </div>
 
