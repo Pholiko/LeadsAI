@@ -32,6 +32,24 @@ export const updateLeadEmail = (id, newEmailDraft) => {
   return updatedLeads;
 };
 
+export const toggleLeadStatus = (id) => {
+  const leads = getLeads();
+  const updatedLeads = leads.map(lead => {
+    if (lead.id === id) {
+      return {
+        ...lead,
+        data: {
+          ...lead.data,
+          emailSent: !lead.data.emailSent
+        }
+      };
+    }
+    return lead;
+  });
+  localStorage.setItem('leads', JSON.stringify(updatedLeads));
+  return updatedLeads;
+};
+
 export const clearLeads = () => {
   localStorage.removeItem('leads');
 };

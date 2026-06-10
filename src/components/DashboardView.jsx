@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getLeads, generateCSV, clearLeads, updateLeadEmail } from '../services/storage';
+import { getLeads, generateCSV, clearLeads, updateLeadEmail, toggleLeadStatus } from '../services/storage';
 
 const PRIORITY_COLORS = {
   HOT: { bg: 'rgba(239, 68, 68, 0.2)', text: '#ef4444', emoji: '🔥' },
@@ -53,6 +53,11 @@ export default function DashboardView({ onCaptureNew }) {
     const updated = updateLeadEmail(id, editContent);
     setLeads(updated);
     setEditingId(null);
+  };
+
+  const handleToggleStatus = (id) => {
+    const updated = toggleLeadStatus(id);
+    setLeads(updated);
   };
 
   const filteredLeads = leads.filter(lead => {
@@ -131,10 +136,17 @@ export default function DashboardView({ onCaptureNew }) {
             const mailtoLink = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
 
             return (
-              <div key={lead.id} className="card glass" style={{ padding: '16px' }}>
+              <div key={lead.id} className="card glass" style={{ padding: '16px', border: lead.data?.emailSent ? '1px solid #22c55e' : '1px solid rgba(255,255,255,0.1)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
                   <div>
-                    <h3 style={{ margin: '0 0 4px', fontSize: '1.1rem' }}>{lead.data?.name || 'Unbekannt'}</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                      <h3 style={{ margin: 0, fontSize: '1.1rem' }}>{lead.data?.name || 'Unbekannt'}</h3>
+                      {lead.data?.emailSent && (
+                        <span style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', padding: '2px 6px', borderRadius: '6px', fontSize: '0.7rem', fontWeight: 'bold' }}>
+                          ✅ Gesendet
+                        </span>
+                      )}
+                    </div>
                     <p className="subtitle" style={{ fontSize: '0.9rem', margin: 0 }}>
                       {lead.data?.role} @ {lead.data?.company}
                     </p>
@@ -150,15 +162,24 @@ export default function DashboardView({ onCaptureNew }) {
                   <strong>Notiz:</strong> {lead.data?.summary}
                 </div>
 
-                <button 
-                  onClick={() => {
-                    if (isEditing) setEditingId(null);
-                    setExpandedId(isExpanded ? null : lead.id);
-                  }}
-                  style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', padding: 0, fontSize: '0.9rem', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '4px' }}
-                >
-                  {isExpanded ? 'E-Mail Entwurf ausblenden ⌃' : 'E-Mail Entwurf lesen ⌄'}
-                </button>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <button 
+                    onClick={() => {
+                      if (isEditing) setEditingId(null);
+                      setExpandedId(isExpanded ? null : lead.id);
+                    }}
+                    style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', padding: 0, fontSize: '0.9rem', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  >
+                    {isExpanded ? 'E-Mail Entwurf ausblenden ⌃' : 'E-Mail Entwurf lesen ⌄'}
+                  </button>
+
+                  <button 
+                    onClick={() => handleToggleStatus(lead.id)}
+                    style={{ background: 'none', border: 'none', color: lead.data?.emailSent ? 'rgba(255,255,255,0.4)' : '#22c55e', cursor: 'pointer', padding: 0, fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  >
+                    {lead.data?.emailSent ? 'Rückgängig' : '✓ Erledigt'}
+                  </button>
+                </div>
 
                 {isExpanded && (
                   <div style={{ marginTop: '12px', background: 'rgba(0,0,0,0.3)', padding: '16px', borderRadius: '8px' }}>
@@ -183,7 +204,18 @@ export default function DashboardView({ onCaptureNew }) {
                       ) : (
                         <>
                           <button className="btn-secondary" style={{ padding: '8px 16px', fontSize: '0.85rem', flex: 1 }} onClick={() => startEditing(lead)}>Bearbeiten</button>
-                          <a href={mailtoLink} className="btn-primary" style={{ textDecoration: 'none', padding: '8px 16px', fontSize: '0.85rem', flex: 2, textAlign: 'center' }}>📧 Jetzt Senden</a>
+                          <a 
+                            href={mailtoLink} 
+                            className="btn-primary" 
+                            onClick={() => {
+                              if (!lead.data?.emailSent) {
+                                handleToggleStatus(lead.id);
+                              }
+                            }}
+                            style={{ textDecoration: 'none', padding: '8px 16px', fontSize: '0.85rem', flex: 2, textAlign: 'center' }}
+                          >
+                            📧 Jetzt Senden
+                          </a>
                         </>
                       )}
                     </div>
