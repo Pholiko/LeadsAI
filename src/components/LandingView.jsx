@@ -68,7 +68,7 @@ export default function LandingView({ onStart }) {
             <div>
               <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Karte scannen & Kontext einsprechen</h3>
               <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Visitenkarte. Sie sprechen einfach kurz ein, worum es ging.</p>
-              <img src="/step1-voice.jpg" alt="Sprachnotiz aufnehmen" style={{ width: '100%', maxWidth: '280px', borderRadius: '12px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }} />
+              <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '280px', borderRadius: '12px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }} />
             </div>
           </div>
 
