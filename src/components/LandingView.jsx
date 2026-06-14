@@ -13,63 +13,65 @@ export default function LandingView({ onStart }) {
 
       {/* Hero Section (Above the fold) */}
       <div style={{ 
-        padding: '24px', 
+        padding: '16px', 
         display: 'flex', 
         flexDirection: 'row', 
-        flexWrap: 'wrap',
+        flexWrap: 'nowrap',
         alignItems: 'center', 
         justifyContent: 'center',
-        gap: '40px',
+        gap: '12px',
         animation: 'fadeIn 0.5s ease',
         maxWidth: '1000px',
-        margin: '0 auto'
+        margin: '0 auto',
+        width: '100%'
       }}>
         
         {/* Left Column: Text & CTA */}
-        <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <div style={{ flex: '1 1 50%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', minWidth: 0 }}>
           
           {/* CSS "Screenshot/Notification" Widget */}
           <div style={{ 
               background: 'rgba(255, 255, 255, 0.05)', 
               border: '1px solid rgba(255, 255, 255, 0.1)', 
-              borderRadius: '16px', 
-              padding: '12px 16px', 
-              marginBottom: '24px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
+              borderRadius: '12px', 
+              padding: '8px 10px', 
+              marginBottom: '16px',
+              boxShadow: '0 5px 15px rgba(0,0,0,0.3)',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
+              gap: '8px',
               backdropFilter: 'blur(10px)',
-              maxWidth: '100%'
+              maxWidth: '100%',
+              overflow: 'hidden'
             }}>
-            <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', flexShrink: 0 }}>
+            <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', flexShrink: 0 }}>
               ✓
             </div>
-            <div style={{ textAlign: 'left' }}>
-              <p style={{ margin: '0 0 4px', fontSize: '0.85rem', fontWeight: 'bold' }}>Kontakt gesichert & E-Mail versendet</p>
-              <p style={{ margin: 0, fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
+            <div style={{ textAlign: 'left', minWidth: 0 }}>
+              <p style={{ margin: '0 0 2px', fontSize: 'clamp(0.6rem, 1.5vw, 0.85rem)', fontWeight: 'bold', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Kontakt gesichert & E-Mail versendet</p>
+              <p style={{ margin: 0, fontSize: 'clamp(0.5rem, 1.2vw, 0.75rem)', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Thomas Müller, CEO NexaCorp</p>
             </div>
           </div>
 
-          <h1 className="title" style={{ fontSize: '2.5rem', marginBottom: '16px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
+          <h1 className="title" style={{ fontSize: 'clamp(1.2rem, 3.5vw, 2.5rem)', marginBottom: '12px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-0.5px', wordBreak: 'break-word' }}>
             Nie wieder Messekontakte <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>verlieren!</span>
           </h1>
           
-          <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
+          <p className="subtitle" style={{ fontSize: 'clamp(0.8rem, 2vw, 1.1rem)', marginBottom: '24px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
             Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden.
           </p>
 
           <button 
             className="btn-primary" 
             onClick={onStart}
-            style={{ padding: '16px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '250px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
+            style={{ padding: '10px 16px', fontSize: 'clamp(0.8rem, 2vw, 1.1rem)', width: '100%', maxWidth: '200px', borderRadius: '10px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
           >
             Jetzt App Starten
           </button>
         </div>
 
         {/* Right Column: Hero Image / WOW Effect */}
-        <div style={{ flex: '1 1 280px', position: 'relative', width: '100%', maxWidth: '280px', margin: '0 auto', marginTop: '16px' }}>
+        <div style={{ flex: '1 1 50%', position: 'relative', width: '100%', maxWidth: '300px', minWidth: 0, display: 'flex', justifyContent: 'center' }}>
           <img 
             src="/step3-email.jpg" 
             alt="Fertige personalisierte E-Mail" 
