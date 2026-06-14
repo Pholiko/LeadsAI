@@ -24,9 +24,9 @@ export default function LandingView({ onStart }) {
         position: 'sticky', 
         top: 0, 
         zIndex: 100, 
-        background: 'rgba(15, 23, 42, 0.75)', 
+        background: 'var(--nav-bg)', 
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid var(--border-color)',
+        borderBottom: '1px solid var(--nav-border)',
         boxShadow: '0 4px 30px rgba(59, 130, 246, 0.15)',
         padding: '16px 24px'
       }}>
