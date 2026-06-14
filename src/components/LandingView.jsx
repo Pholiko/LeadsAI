@@ -13,62 +13,63 @@ export default function LandingView({ onStart }) {
 
       {/* Hero Section (Above the fold) */}
       <div style={{ 
-        padding: '16px', 
+        padding: '24px', 
         display: 'flex', 
         flexDirection: 'row', 
-        flexWrap: 'nowrap',
+        flexWrap: 'wrap',
         alignItems: 'center', 
         justifyContent: 'center',
-        gap: '16px',
+        gap: '40px',
         animation: 'fadeIn 0.5s ease',
-        maxWidth: '1200px',
+        maxWidth: '1000px',
         margin: '0 auto'
       }}>
         
         {/* Left Column: Text & CTA */}
-        <div style={{ flex: '1 1 50%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', minWidth: 0 }}>
+        <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           
           {/* CSS "Screenshot/Notification" Widget */}
           <div style={{ 
               background: 'rgba(255, 255, 255, 0.05)', 
               border: '1px solid rgba(255, 255, 255, 0.1)', 
               borderRadius: '16px', 
-              padding: '12px', 
-              marginBottom: '16px',
+              padding: '12px 16px', 
+              marginBottom: '24px',
               boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
+              gap: '12px',
               backdropFilter: 'blur(10px)',
               maxWidth: '100%'
             }}>
-            <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', flexShrink: 0 }}>
+            <div style={{ background: 'rgba(34, 197, 94, 0.2)', color: '#22c55e', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', flexShrink: 0 }}>
               ✓
             </div>
-            <div style={{ textAlign: 'left', overflow: 'hidden' }}>
-              <p style={{ margin: '0 0 2px', fontSize: '0.75rem', fontWeight: 'bold', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Kontakt gesichert & E-Mail versendet</p>
+            <div style={{ textAlign: 'left' }}>
+              <p style={{ margin: '0 0 4px', fontSize: '0.85rem', fontWeight: 'bold' }}>Kontakt gesichert & E-Mail versendet</p>
+              <p style={{ margin: 0, fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
             </div>
           </div>
 
-          <h1 className="title" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.8rem)', marginBottom: '12px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
+          <h1 className="title" style={{ fontSize: '2.5rem', marginBottom: '16px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
             Nie wieder Messekontakte <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>verlieren!</span>
           </h1>
           
-          <p className="subtitle" style={{ fontSize: 'clamp(0.85rem, 2vw, 1.1rem)', marginBottom: '24px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
+          <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
             Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden.
           </p>
 
           <button 
             className="btn-primary" 
             onClick={onStart}
-            style={{ padding: '12px 16px', fontSize: '0.95rem', width: '100%', maxWidth: '200px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
+            style={{ padding: '16px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '250px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
           >
             Jetzt App Starten
           </button>
         </div>
 
         {/* Right Column: Hero Image / WOW Effect */}
-        <div style={{ flex: '1 1 50%', position: 'relative', width: '100%', maxWidth: '400px', perspective: '1000px', minWidth: 0 }}>
+        <div style={{ flex: '1 1 280px', position: 'relative', width: '100%', maxWidth: '280px', margin: '0 auto', marginTop: '16px' }}>
           <img 
             src="/step3-email.jpg" 
             alt="Fertige personalisierte E-Mail" 
@@ -76,7 +77,6 @@ export default function LandingView({ onStart }) {
               width: '100%', 
               borderRadius: '16px', 
               boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1)', 
-              transform: 'rotateX(5deg) rotateY(-5deg)',
               animation: 'slideUp 1s ease 0.2s backwards'
             }} 
           />
