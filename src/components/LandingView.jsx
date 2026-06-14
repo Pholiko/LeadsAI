@@ -177,7 +177,7 @@ export default function LandingView({ onStart }) {
             style={{ 
               width: '100%', 
               borderRadius: '16px', 
-              boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--border-color)', 
+              boxShadow: '0 25px 50px rgba(0,0,0,0.12), 0 0 0 1px var(--border-color)', 
               animation: 'slideUp 1s ease 0.2s backwards'
             }} 
           />
@@ -306,21 +306,21 @@ export default function LandingView({ onStart }) {
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Visitenkarte & Kontext</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
-            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '200px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>KI-Transkription</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
-            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '200px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>E-Mail versenden</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
-            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '200px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
         </div>
