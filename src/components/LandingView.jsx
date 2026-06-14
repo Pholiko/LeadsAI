@@ -129,12 +129,12 @@ export default function LandingView({ onStart }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
           
           {/* Aktuell (Before) */}
-          <div className="card" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.2)', padding: '32px', margin: 0 }}>
+          <div className="card" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.2)', padding: '32px', margin: 0, display: 'flex', flexDirection: 'column' }}>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--danger)', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontSize: '1.5rem' }}>❌</span> Der alte Weg
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', marginBottom: '32px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📝</span> 50 Visitenkarten sammeln</div>
               <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🏨</span> Abends im Hotel abtippen</div>
@@ -144,20 +144,20 @@ export default function LandingView({ onStart }) {
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>✉️</span> Standard-Mails schreiben</div>
             </div>
             
-            <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--danger)' }}>
+            <div style={{ marginTop: 'auto', paddingTop: '24px', borderTop: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--danger)' }}>
               ⏱ 2-3 Stunden Arbeit
             </div>
           </div>
 
           {/* Mit LeadsAI (After) */}
-          <div className="card" style={{ background: 'linear-gradient(180deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)', border: '1px solid rgba(34, 197, 94, 0.3)', padding: '32px', position: 'relative', overflow: 'hidden', margin: 0 }}>
+          <div className="card" style={{ background: 'linear-gradient(180deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)', border: '1px solid rgba(34, 197, 94, 0.3)', padding: '32px', position: 'relative', overflow: 'hidden', margin: 0, display: 'flex', flexDirection: 'column' }}>
             <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--success)', filter: 'blur(80px)', opacity: '0.2', borderRadius: '50%' }}></div>
             
             <h3 style={{ fontSize: '1.2rem', color: '#22c55e', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontSize: '1.5rem' }}>⚡️</span> Mit Lead AI
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: '500' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: '500', marginBottom: '32px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📸</span> Visitenkarte fotografieren</div>
               <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(34, 197, 94, 0.3)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🎙</span> 10 Sekunden Kontext einsprechen</div>
@@ -165,7 +165,7 @@ export default function LandingView({ onStart }) {
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>✨</span> Personalisiertes Follow-Up für alle</div>
             </div>
             
-            <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(34, 197, 94, 0.3)', fontSize: '1.5rem', fontWeight: 'bold', color: '#22c55e' }}>
+            <div style={{ marginTop: 'auto', paddingTop: '24px', borderTop: '1px solid rgba(34, 197, 94, 0.3)', fontSize: '1.5rem', fontWeight: 'bold', color: '#22c55e' }}>
               ⏱ 60 Sekunden Arbeit
             </div>
           </div>
@@ -174,39 +174,30 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Process Section (Below the fold) */}
-      <div style={{ padding: '24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
-        <p style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>So funktioniert's</p>
+      <div style={{ padding: '40px 24px', marginTop: '24px', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: '800', margin: '0 0 40px', textAlign: 'center', letterSpacing: '-0.5px' }}>So funktioniert's</h2>
         
-        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', paddingLeft: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', position: 'relative' }}>
           
-          {/* Vertical Timeline Line */}
-          <div style={{ position: 'absolute', left: '26px', top: '20px', bottom: '20px', width: '2px', background: 'rgba(255,255,255,0.1)' }}></div>
-
-          <div style={{ display: 'flex', gap: '20px', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
-            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>1</div>
-            <div>
-              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>Karte scannen & Kontext einsprechen</h3>
-              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Visitenkarte. Sie sprechen einfach kurz ein, worum es ging.</p>
-              <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '280px', borderRadius: '12px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }} />
-            </div>
+          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
+            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>Visitenkarte & Kontext</h3>
+            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
+            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
-          <div style={{ display: 'flex', gap: '20px', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
-            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>2</div>
-            <div>
-              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>KI-Transkription & Auswertung</h3>
-              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles vor dem nächsten Schritt überprüfen.</p>
-              <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '280px', borderRadius: '12px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }} />
-            </div>
+          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
+            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>KI-Transkription</h3>
+            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
+            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
-          <div style={{ display: 'flex', gap: '20px', position: 'relative', zIndex: 1 }}>
-            <div style={{ background: 'var(--bg-color)', border: '2px solid var(--primary)', color: 'white', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>3</div>
-            <div>
-              <h3 style={{ margin: '0 0 8px', fontSize: '1.1rem' }}>E-Mail versenden</h3>
-              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die perfekt personalisierte E-Mail direkt an den Kunden raus.</p>
-              <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '280px', borderRadius: '12px', marginTop: '16px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }} />
-            </div>
+          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
+            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>E-Mail versenden</h3>
+            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
+            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
         </div>
