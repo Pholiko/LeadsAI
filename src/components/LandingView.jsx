@@ -100,11 +100,11 @@ export default function LandingView({ onStart }) {
           </div>
 
           <h1 className="title" style={{ fontSize: '2.5rem', marginBottom: '16px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
-            Persönliche Follow-Ups auf Messen in <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>60 Sekunden</span> statt 3 Stunden
+            Jeder Messekontakt bekommt <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>sofort ein persönliches Follow-Up</span>
           </h1>
           
           <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'var(--text-secondary)', textAlign: 'left', lineHeight: '1.4' }}>
-            Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden.
+            Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden. Nie wieder einen Lead verlieren.
           </p>
 
 
