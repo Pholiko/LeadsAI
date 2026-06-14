@@ -177,7 +177,7 @@ export default function LandingView({ onStart }) {
             style={{ 
               width: '100%', 
               borderRadius: '16px', 
-              boxShadow: '0 25px 50px rgba(0,0,0,0.12), 0 0 0 1px var(--border-color)', 
+              boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 0 0 1px var(--border-color)', 
               animation: 'slideUp 1s ease 0.2s backwards'
             }} 
           />
