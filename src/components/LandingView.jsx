@@ -174,32 +174,67 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Process Section (Below the fold) */}
-      <div style={{ padding: '40px 24px', marginTop: '24px', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: '800', margin: '0 0 40px', textAlign: 'center', letterSpacing: '-0.5px' }}>So funktioniert's</h2>
+      <div style={{ padding: '40px 24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>So funktioniert's</h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', position: 'relative' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', position: 'relative' }}>
           
-          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
-            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>Visitenkarte & Kontext</h3>
-            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
-            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
+            <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Visitenkarte & Kontext</h3>
+            <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
+            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
-          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
-            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>KI-Transkription</h3>
-            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
-            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
+            <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>KI-Transkription</h3>
+            <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
+            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
-          <div className="card glass" style={{ margin: 0, padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1rem', fontWeight: 'bold', marginBottom: '16px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
-            <h3 style={{ margin: '0 0 12px', fontSize: '1.1rem' }}>E-Mail versenden</h3>
-            <p style={{ margin: '0 0 24px', fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
-            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '180px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+          <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
+            <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>E-Mail versenden</h3>
+            <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
+            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
+        </div>
+      </div>
+
+      {/* Target Audience Section */}
+      <div style={{ padding: '60px 24px 80px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>Für wen ist Lead AI?</h2>
+        
+        <div className="card glass" style={{ padding: '32px', borderTop: '3px solid var(--primary)' }}>
+          <p style={{ fontSize: '1.1rem', marginBottom: '24px', fontWeight: 'bold', color: 'white' }}>
+            B2B Unternehmen mit vielen Messe-Ausstellungen und aktiven Vertrieblern.
+          </p>
+          
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
+              <div>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Ideale Ergänzung zu bestehenden CRM-Systemen</strong>
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Kein Ersatz für Ihr CRM, sondern ein Turbo für die Datenerfassung direkt auf der Messe.</span>
+              </div>
+            </li>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
+              <div>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Schnelle E-Mails, direkt zum Abschicken</strong>
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Keine langen Wartezeiten. Follow-Ups können noch auf dem Heimweg von der Messe rausgehen.</span>
+              </div>
+            </li>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
+              <div>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Alternative: CSV-Export</strong>
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Alle erfassten Kontakte und Notizen per Klick als CSV exportieren und bequem in HubSpot, Salesforce oder andere Tools importieren.</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
