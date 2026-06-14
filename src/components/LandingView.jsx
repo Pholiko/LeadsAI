@@ -5,8 +5,17 @@ export default function LandingView({ onStart }) {
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: 'var(--bg-color)', overflowY: 'auto', paddingBottom: '40px' }}>
       
       {/* Top Bar */}
-      <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.5px' }}>
+      <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+        <div style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="url(#paint0_linear)" stroke="var(--primary)" strokeWidth="2" strokeLinejoin="round"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stopColor="var(--primary)" />
+                <stop offset="1" stopColor="#a855f7" />
+              </linearGradient>
+            </defs>
+          </svg>
           Lead <span style={{ color: 'var(--primary)' }}>AI</span>
         </div>
       </div>
@@ -204,7 +213,7 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Target Audience Section */}
-      <div style={{ padding: '60px 24px 80px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
+      <div style={{ padding: '40px 24px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>Für wen ist Lead AI?</h2>
         
         <div className="card glass" style={{ padding: '32px', borderTop: '3px solid var(--primary)' }}>
@@ -238,6 +247,62 @@ export default function LandingView({ onStart }) {
         </div>
       </div>
 
+      {/* Pricing Section */}
+      <div style={{ padding: '60px 24px', maxWidth: '800px', margin: '0 auto', width: '100%', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', margin: '0 0 16px', letterSpacing: '-1px' }}>Pricing</h2>
+        <p style={{ fontSize: '1.2rem', color: 'var(--success)', fontWeight: 'bold', margin: '0 0 8px' }}>
+          Aktuell in der kostenlosen Testphase.
+        </p>
+        <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', margin: '0 0 32px' }}>
+          Jetzt kostenlosen Testzugang anfordern!
+        </p>
+        <button 
+          className="btn-primary" 
+          onClick={onStart}
+          style={{ padding: '16px 32px', fontSize: '1.1rem', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
+        >
+          Testzugang anfordern
+        </button>
+      </div>
+
+      {/* Footer */}
+      <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '40px 24px', marginTop: '40px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: '32px' }}>
+          
+          <div style={{ flex: '1 1 200px' }}>
+            <div style={{ fontWeight: '800', fontSize: '1.2rem', color: 'white', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="var(--primary)" />
+              </svg>
+              Lead <span style={{ color: 'var(--primary)' }}>AI</span>
+            </div>
+            <p style={{ margin: 0, lineHeight: '1.5' }}>Nie wieder Messekontakte verlieren.<br/>Schnelles und personalisiertes Follow-Up.</p>
+          </div>
+
+          <div style={{ flex: '1 1 150px' }}>
+            <h4 style={{ color: 'white', marginBottom: '16px', fontWeight: 'bold' }}>Produkt</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a></li>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a></li>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Use Cases</a></li>
+            </ul>
+          </div>
+
+          <div style={{ flex: '1 1 150px' }}>
+            <h4 style={{ color: 'white', marginBottom: '16px', fontWeight: 'bold' }}>Rechtliches</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Impressum</a></li>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Datenschutz</a></li>
+              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>AGB</a></li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', fontSize: '0.8rem' }}>
+          &copy; {new Date().getFullYear()} Lead AI. Alle Rechte vorbehalten.
+        </div>
+      </footer>
     </div>
   );
 }
