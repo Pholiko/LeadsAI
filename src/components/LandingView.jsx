@@ -122,6 +122,57 @@ export default function LandingView({ onStart }) {
         </div>
       </div>
 
+      {/* Before / After Section */}
+      <div style={{ padding: '40px 24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: '800', margin: '0 0 40px', textAlign: 'center', letterSpacing: '-0.5px' }}>Zwei Wege, Ihre Leads zu bearbeiten</h2>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+          
+          {/* Aktuell (Before) */}
+          <div className="card" style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.2)', padding: '32px', margin: 0 }}>
+            <h3 style={{ fontSize: '1.2rem', color: 'var(--danger)', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '1.5rem' }}>❌</span> Der alte Weg
+            </h3>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📝</span> 50 Visitenkarten sammeln</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🏨</span> Abends im Hotel abtippen</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📊</span> In Excel & CRM übertragen</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>✉️</span> Standard-Mails schreiben</div>
+            </div>
+            
+            <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--danger)' }}>
+              ⏱ 2-3 Stunden Arbeit
+            </div>
+          </div>
+
+          {/* Mit LeadsAI (After) */}
+          <div className="card" style={{ background: 'linear-gradient(180deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)', border: '1px solid rgba(34, 197, 94, 0.3)', padding: '32px', position: 'relative', overflow: 'hidden', margin: 0 }}>
+            <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--success)', filter: 'blur(80px)', opacity: '0.2', borderRadius: '50%' }}></div>
+            
+            <h3 style={{ fontSize: '1.2rem', color: '#22c55e', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontSize: '1.5rem' }}>⚡️</span> Mit Lead AI
+            </h3>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: '500' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📸</span> Visitenkarte fotografieren</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(34, 197, 94, 0.3)' }}>↓</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🎙</span> 10 Sekunden Kontext einsprechen</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(34, 197, 94, 0.3)' }}>↓</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>✨</span> Personalisiertes Follow-Up für alle</div>
+            </div>
+            
+            <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid rgba(34, 197, 94, 0.3)', fontSize: '1.5rem', fontWeight: 'bold', color: '#22c55e' }}>
+              ⏱ 60 Sekunden Arbeit
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* Process Section (Below the fold) */}
       <div style={{ padding: '24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
         <p style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>So funktioniert's</p>
