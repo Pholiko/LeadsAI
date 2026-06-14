@@ -107,7 +107,13 @@ export default function LandingView({ onStart }) {
             Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden. Nie wieder einen Messekontakt verlieren.
           </p>
 
-
+          <button 
+            className="btn-primary" 
+            onClick={onStart}
+            style={{ padding: '14px 28px', fontSize: '1rem', borderRadius: '12px', fontWeight: '600', boxShadow: '0 8px 20px rgba(59, 130, 246, 0.3)' }}
+          >
+            Jetzt kostenlos testen
+          </button>
         </div>
 
         {/* Right Column: Hero Image / WOW Effect */}
