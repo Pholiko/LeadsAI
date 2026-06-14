@@ -169,6 +169,56 @@ export default function LandingView({ onStart }) {
         </div>
       </div>
 
+      {/* Testimonials 1 */}
+      <div style={{ padding: '60px 24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>Was unsere ersten Nutzer sagen</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Früher habe ich auf Messen oft den Überblick verloren. Heute scanne ich die Karte, spreche 10 Sekunden ein und die Mail ist noch am selben Abend beim Kunden!"
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>M</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Michael T.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Head of Sales</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Die KI-Transkription ist der Wahnsinn. Sogar im Lärm der vollen Messehalle erkennt Lead AI absolut jedes Wort fehlerfrei. Ein echter Gamechanger."
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #22c55e 0%, #10b981 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>S</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Sarah M.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Marketing Managerin</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Wir sparen uns locker 3 Stunden mühsame Tipparbeit pro Messe-Tag. Die E-Mails sind perfekt personalisiert. Absolute Empfehlung für jedes Vertriebsteam!"
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>J</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Jan K.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Geschäftsführer</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* Before / After Section */}
       <div style={{ padding: '40px 24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
         <h2 style={{ fontSize: '2.2rem', fontWeight: '800', margin: '0 0 40px', textAlign: 'center', letterSpacing: '-0.5px' }}>Zwei Wege, Ihre Leads zu bearbeiten</h2>
@@ -289,7 +339,7 @@ export default function LandingView({ onStart }) {
       <div id="pricing" style={{ padding: '60px 24px', maxWidth: '800px', margin: '0 auto', width: '100%', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', fontWeight: '800', margin: '0 0 16px', letterSpacing: '-1px' }}>Pricing</h2>
         <p style={{ fontSize: '1.2rem', color: 'var(--success)', fontWeight: 'bold', margin: '0 0 8px' }}>
-          Aktuell in der kostenlosen Testphase.
+          Aktuell in der kostenlosen und komplett unverbindlichen Testphase.
         </p>
         <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', margin: '0 0 32px' }}>
           Jetzt kostenlosen Testzugang anfordern!
@@ -301,6 +351,55 @@ export default function LandingView({ onStart }) {
         >
           Testzugang anfordern
         </button>
+      </div>
+
+      {/* Testimonials 2 */}
+      <div style={{ padding: '40px 24px 20px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Ich war erst skeptisch, aber der nahtlose CSV-Export für unser HubSpot hat mich komplett überzeugt. Ein Muss für jeden modernen Vertriebler."
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>L</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Laura S.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Sales Operations</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Kein lästiges Abtippen mehr im Hotelzimmer. Ich habe jetzt nach langen Messetagen endlich wieder pünktlich Feierabend. Danke an das Team!"
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>T</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Thomas B.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Key Account Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
+              "Unsere Conversion-Rate hat sich drastisch erhöht, weil wir als allererste follow-uppen. Das Produkt macht sich quasi von selbst bezahlt."
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>E</div>
+              <div>
+                <p style={{ margin: '0 0 4px', fontWeight: 'bold', fontSize: '0.95rem' }}>Elena R.</p>
+                <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Startup Founder</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       {/* FAQ Section */}
