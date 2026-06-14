@@ -54,7 +54,7 @@ export default function LandingView({ onStart }) {
             <a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Wie es funktioniert</a>
             <a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>FAQ</a>
             <a href="#pricing" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Pricing</a>
-            <button onClick={onStart} style={{ background: 'var(--primary)', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem', transition: 'transform 0.2s, boxShadow 0.2s' }} onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(99, 102, 241, 0.4)'; }} onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'; }}>Login</button>
+            <a href="#login" onClick={(e) => { e.preventDefault(); onStart(); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Login</a>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@ export default function LandingView({ onStart }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           {[
             { icon: "🧠", text: "Merkt sich alle Gespräche." },
-            { icon: "✅", text: "Garantiertes personalisiertes Follow-Up direkt nach dem Gespräch." },
+            { icon: "✅", text: "Garantiertes personalisiertes Follow-Up." },
             { icon: "⚡️", text: "Dauert nur 60 Sekunden." },
             { icon: "🤩", text: "Wirkt beeindruckend auf den potenziellen Kunden." },
             { icon: "🛡", text: "Keine potenziellen Umsätze mehr verlieren." },
