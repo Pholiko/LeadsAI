@@ -49,12 +49,12 @@ export default function LandingView({ onStart }) {
           </div>
 
           {/* Nav Links */}
-          <div style={{ display: 'flex', gap: '24px', fontSize: '0.95rem', fontWeight: '500', alignItems: 'center' }}>
-            <a href="#start" onClick={(e) => { e.preventDefault(); scrollTo('start'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Start</a>
-            <a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Wie es funktioniert</a>
-            <a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>FAQ</a>
-            <a href="#pricing" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Pricing</a>
-            <a href="#login" onClick={(e) => { e.preventDefault(); onStart(); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Login</a>
+          <div style={{ display: 'flex', gap: '8px', fontSize: '0.95rem', fontWeight: '500', alignItems: 'center' }}>
+            <a href="#start" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('start'); }}>Start</a>
+            <a href="#how-it-works" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }}>Wie es funktioniert</a>
+            <a href="#faq" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }}>FAQ</a>
+            <a href="#pricing" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }}>Pricing</a>
+            <a href="#login" className="nav-link" onClick={(e) => { e.preventDefault(); onStart(); }}>Login</a>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ export default function LandingView({ onStart }) {
           </h1>
           
           <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'var(--text-secondary)', textAlign: 'left', lineHeight: '1.4' }}>
-            Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden. Nie wieder einen Lead verlieren.
+            Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden. Nie wieder einen Messekontakt verlieren.
           </p>
 
 
