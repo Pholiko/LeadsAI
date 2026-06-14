@@ -32,17 +32,17 @@ export default function LandingView({ onStart }) {
             ✓
           </div>
           <div style={{ textAlign: 'left' }}>
-            <p style={{ margin: '0 0 4px', fontSize: '0.9rem', fontWeight: 'bold' }}>Lead gesichert & E-Mail versendet</p>
+            <p style={{ margin: '0 0 4px', fontSize: '0.9rem', fontWeight: 'bold' }}>Kontakt gesichert & E-Mail versendet</p>
             <p style={{ margin: 0, fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
           </div>
         </div>
 
-        <h1 className="title" style={{ fontSize: '2.8rem', marginBottom: '16px', lineHeight: '1.1', fontWeight: '800', textAlign: 'center', letterSpacing: '-1px' }}>
-          Lead-Erfassung in <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Echtzeit.</span>
+        <h1 className="title" style={{ fontSize: '2.5rem', marginBottom: '16px', lineHeight: '1.2', fontWeight: '800', textAlign: 'center', letterSpacing: '-1px' }}>
+          Nie wieder Messekontakte <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>verlieren!</span>
         </h1>
         
         <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', maxWidth: '400px', color: 'rgba(255,255,255,0.7)', textAlign: 'center', lineHeight: '1.5' }}>
-          Jeder aufgeschobene Lead ist bares Geld, das Sie der Konkurrenz überlassen. Während andere abends noch Visitenkarten abtippen, schicken Sie schon am Messe-Stand die perfekt <strong>personalisierte</strong> E-Mail raus.
+          Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden. Kein wertvoller Messekontakt geht mehr verloren.
         </p>
 
         <button 
