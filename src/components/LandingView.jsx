@@ -48,10 +48,38 @@ export default function LandingView({ onStart }) {
         <button 
           className="btn-primary" 
           onClick={onStart}
-          style={{ padding: '18px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '300px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
+          style={{ padding: '18px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '300px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)', marginBottom: '40px' }}
         >
           Jetzt App Starten
         </button>
+
+        {/* Hero Image / WOW Effect */}
+        <div style={{ position: 'relative', width: '100%', maxWidth: '320px', margin: '0 auto', perspective: '1000px' }}>
+          <img 
+            src="/step3-email.jpg" 
+            alt="Fertige personalisierte E-Mail" 
+            style={{ 
+              width: '100%', 
+              borderRadius: '16px', 
+              boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1)', 
+              transform: 'rotateX(5deg)',
+              animation: 'slideUp 1s ease 0.2s backwards'
+            }} 
+          />
+          {/* Subtle glow effect behind the image */}
+          <div style={{
+            position: 'absolute',
+            top: '20%',
+            left: '10%',
+            right: '10%',
+            bottom: '0',
+            background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)',
+            filter: 'blur(50px)',
+            opacity: '0.3',
+            zIndex: '-1',
+            borderRadius: '50%'
+          }}></div>
+        </div>
       </div>
 
       {/* Process Section (Below the fold) */}
