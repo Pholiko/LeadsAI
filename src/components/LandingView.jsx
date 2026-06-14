@@ -250,21 +250,21 @@ export default function LandingView({ onStart }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', position: 'relative' }}>
           
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
+            <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Visitenkarte & Kontext</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
             <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
+            <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>KI-Transkription</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
             <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <div style={{ background: 'var(--primary)', color: 'white', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
+            <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>E-Mail versenden</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
             <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
@@ -278,7 +278,7 @@ export default function LandingView({ onStart }) {
         <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>Für wen ist Lead AI?</h2>
         
         <div className="card glass" style={{ padding: '32px', borderTop: '3px solid var(--primary)' }}>
-          <p style={{ fontSize: '1.1rem', marginBottom: '24px', fontWeight: 'bold', color: 'white' }}>
+          <p style={{ fontSize: '1.1rem', marginBottom: '24px', fontWeight: 'bold', color: 'var(--text-primary)' }}>
             B2B Unternehmen mit vielen Messe-Ausstellungen und aktiven Vertrieblern.
           </p>
           
@@ -286,21 +286,21 @@ export default function LandingView({ onStart }) {
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
               <div>
-                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Ideale Ergänzung zu bestehenden CRM-Systemen</strong>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'var(--text-primary)' }}>Ideale Ergänzung zu bestehenden CRM-Systemen</strong>
                 <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Kein Ersatz für Ihr CRM, sondern ein Turbo für die Datenerfassung direkt auf der Messe.</span>
               </div>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
               <div>
-                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Schnelle E-Mails, direkt zum Abschicken</strong>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'var(--text-primary)' }}>Schnelle E-Mails, direkt zum Abschicken</strong>
                 <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Keine langen Wartezeiten. Follow-Ups können noch auf dem Heimweg von der Messe rausgehen.</span>
               </div>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
               <span style={{ color: 'var(--primary)', fontSize: '1.2rem', marginTop: '-2px' }}>✓</span>
               <div>
-                <strong style={{ display: 'block', marginBottom: '4px', color: 'white' }}>Alternative: CSV-Export</strong>
+                <strong style={{ display: 'block', marginBottom: '4px', color: 'var(--text-primary)' }}>Alternative: CSV-Export</strong>
                 <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Alle erfassten Kontakte und Notizen per Klick als CSV exportieren und bequem in HubSpot, Salesforce oder andere Tools importieren.</span>
               </div>
             </li>
@@ -335,11 +335,11 @@ export default function LandingView({ onStart }) {
           {faqs.map((faq, index) => (
             <div key={index} className="card glass" style={{ margin: 0, padding: 0, overflow: 'hidden', cursor: 'pointer', transition: 'all 0.3s ease' }} onClick={() => setOpenFaq(openFaq === index ? null : index)}>
               <div style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600', color: openFaq === index ? 'white' : 'rgba(255,255,255,0.9)' }}>{faq.q}</h3>
+                <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600', color: openFaq === index ? 'var(--text-primary)' : 'var(--text-secondary)' }}>{faq.q}</h3>
                 <span style={{ fontSize: '1.5rem', color: 'var(--primary)', transform: openFaq === index ? 'rotate(45deg)' : 'none', transition: 'transform 0.3s ease' }}>+</span>
               </div>
               {openFaq === index && (
-                <div style={{ padding: '0 24px 24px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                <div style={{ padding: '0 24px 24px', color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
                   {faq.a}
                 </div>
               )}
@@ -349,11 +349,11 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '40px 24px', marginTop: '40px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+      <footer style={{ background: '#0f172a', borderTop: '1px solid var(--border-color)', padding: '40px 24px', marginTop: '40px', color: '#94a3b8', fontSize: '0.9rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: '32px' }}>
           
           <div style={{ flex: '1 1 200px' }}>
-            <div style={{ fontWeight: '800', fontSize: '1.2rem', color: 'white', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ fontWeight: '800', fontSize: '1.2rem', color: '#f8fafc', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.364 3.636a3 3 0 0 1 4.243 4.243L8.5 22H4v-4.5L18.364 3.636z" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M15.5 6.5l3 3" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -364,7 +364,7 @@ export default function LandingView({ onStart }) {
           </div>
 
           <div style={{ flex: '1 1 150px' }}>
-            <h4 style={{ color: 'white', marginBottom: '16px', fontWeight: 'bold' }}>Produkt</h4>
+            <h4 style={{ color: '#f8fafc', marginBottom: '16px', fontWeight: 'bold' }}>Produkt</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a></li>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a></li>
@@ -373,7 +373,7 @@ export default function LandingView({ onStart }) {
           </div>
 
           <div style={{ flex: '1 1 150px' }}>
-            <h4 style={{ color: 'white', marginBottom: '16px', fontWeight: 'bold' }}>Rechtliches</h4>
+            <h4 style={{ color: '#f8fafc', marginBottom: '16px', fontWeight: 'bold' }}>Rechtliches</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Impressum</a></li>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Datenschutz</a></li>
@@ -383,7 +383,7 @@ export default function LandingView({ onStart }) {
           
         </div>
         
-        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center', fontSize: '0.8rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', fontSize: '0.8rem' }}>
           &copy; {new Date().getFullYear()} Lead AI. Alle Rechte vorbehalten.
         </div>
       </footer>
