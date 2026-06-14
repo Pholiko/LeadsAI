@@ -1,27 +1,65 @@
 import React from 'react';
 
 export default function LandingView({ onStart }) {
+  const [openFaq, setOpenFaq] = React.useState(null);
+
+  const faqs = [
+    { q: "Wie genau funktioniert die KI-Transkription?", a: "Die KI erkennt den Text auf der Visitenkarte automatisch und verknüpft ihn mit Ihrer Sprachnotiz. Selbst bei Hintergrundgeräuschen auf der Messe ist die Erkennung hochpräzise." },
+    { q: "Kann ich die E-Mails vor dem Versand noch anpassen?", a: "Ja! Sie sehen immer einen fertigen Entwurf, den Sie mit einem Klick bearbeiten können, bevor die E-Mail an Ihren Kontakt versendet wird." },
+    { q: "Ist LeadsAI mit meinem aktuellen CRM kompatibel?", a: "LeadsAI bietet einen bequemen CSV-Export an, der in jedes gängige CRM (HubSpot, Salesforce, Pipedrive) importiert werden kann." },
+    { q: "Was passiert, wenn ich auf der Messe schlechtes Internet habe?", a: "Die App speichert Ihre Scans und Sprachnotizen lokal zwischen und verarbeitet sie automatisch, sobald Sie wieder eine stabile Verbindung haben." },
+    { q: "Ist die Testphase wirklich kostenlos?", a: "Absolut. Während der Testphase können Sie alle Funktionen von LeadsAI komplett kostenlos und unverbindlich ausprobieren." }
+  ];
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: 'var(--bg-color)', overflowY: 'auto', paddingBottom: '40px' }}>
       
-      {/* Top Bar */}
-      <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-        <div style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="url(#paint0_linear)" stroke="var(--primary)" strokeWidth="2" strokeLinejoin="round"/>
-            <defs>
-              <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-                <stop stopColor="var(--primary)" />
-                <stop offset="1" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
-          </svg>
-          Lead <span style={{ color: 'var(--primary)' }}>AI</span>
+      {/* Top Bar Navigation */}
+      <div style={{ 
+        position: 'sticky', 
+        top: 0, 
+        zIndex: 100, 
+        background: 'rgba(15, 23, 42, 0.75)', 
+        backdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255,255,255,0.05)',
+        boxShadow: '0 4px 30px rgba(59, 130, 246, 0.15)',
+        padding: '16px 24px'
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+          
+          {/* Logo */}
+          <div style={{ fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.364 3.636a3 3 0 0 1 4.243 4.243L8.5 22H4v-4.5L18.364 3.636z" stroke="url(#paint0_linear)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15.5 6.5l3 3" stroke="url(#paint0_linear)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M4 22l4-1 1-4L4 22z" fill="var(--primary)" />
+              <defs>
+                <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="var(--primary)" />
+                  <stop offset="1" stopColor="#a855f7" />
+                </linearGradient>
+              </defs>
+            </svg>
+            Lead <span style={{ color: 'var(--primary)' }}>AI</span>
+          </div>
+
+          {/* Nav Links */}
+          <div style={{ display: 'flex', gap: '24px', fontSize: '0.95rem', fontWeight: '500' }}>
+            <a href="#start" onClick={(e) => { e.preventDefault(); scrollTo('start'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Start</a>
+            <a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Wie es funktioniert</a>
+            <a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>FAQ</a>
+            <a href="#pricing" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Pricing</a>
+          </div>
         </div>
       </div>
 
       {/* Hero Section (Above the fold) */}
-      <div style={{ 
+      <div id="start" style={{ 
         padding: '24px', 
         display: 'flex', 
         flexDirection: 'row', 
@@ -183,7 +221,7 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Process Section (Below the fold) */}
-      <div style={{ padding: '40px 24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+      <div id="how-it-works" style={{ padding: '40px 24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>So funktioniert's</h2>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', position: 'relative' }}>
@@ -248,7 +286,7 @@ export default function LandingView({ onStart }) {
       </div>
 
       {/* Pricing Section */}
-      <div style={{ padding: '60px 24px', maxWidth: '800px', margin: '0 auto', width: '100%', textAlign: 'center' }}>
+      <div id="pricing" style={{ padding: '60px 24px', maxWidth: '800px', margin: '0 auto', width: '100%', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', fontWeight: '800', margin: '0 0 16px', letterSpacing: '-1px' }}>Pricing</h2>
         <p style={{ fontSize: '1.2rem', color: 'var(--success)', fontWeight: 'bold', margin: '0 0 8px' }}>
           Aktuell in der kostenlosen Testphase.
@@ -265,6 +303,26 @@ export default function LandingView({ onStart }) {
         </button>
       </div>
 
+      {/* FAQ Section */}
+      <div id="faq" style={{ padding: '60px 24px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-1px' }}>FAQ</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {faqs.map((faq, index) => (
+            <div key={index} className="card glass" style={{ margin: 0, padding: 0, overflow: 'hidden', cursor: 'pointer', transition: 'all 0.3s ease' }} onClick={() => setOpenFaq(openFaq === index ? null : index)}>
+              <div style={{ padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '600', color: openFaq === index ? 'white' : 'rgba(255,255,255,0.9)' }}>{faq.q}</h3>
+                <span style={{ fontSize: '1.5rem', color: 'var(--primary)', transform: openFaq === index ? 'rotate(45deg)' : 'none', transition: 'transform 0.3s ease' }}>+</span>
+              </div>
+              {openFaq === index && (
+                <div style={{ padding: '0 24px 24px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Footer */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '40px 24px', marginTop: '40px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: '32px' }}>
@@ -272,7 +330,8 @@ export default function LandingView({ onStart }) {
           <div style={{ flex: '1 1 200px' }}>
             <div style={{ fontWeight: '800', fontSize: '1.2rem', color: 'white', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="var(--primary)" />
+                <path d="M18.364 3.636a3 3 0 0 1 4.243 4.243L8.5 22H4v-4.5L18.364 3.636z" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15.5 6.5l3 3" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               Lead <span style={{ color: 'var(--primary)' }}>AI</span>
             </div>
