@@ -99,7 +99,7 @@ export default function LandingView({ onStart }) {
           </div>
 
           <h1 className="title" style={{ fontSize: '2.5rem', marginBottom: '16px', lineHeight: '1.2', fontWeight: '800', textAlign: 'left', letterSpacing: '-1px' }}>
-            Nie wieder Messekontakte <br/><span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>verlieren!</span>
+            Persönliche Follow-Ups auf Messen in <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>60 Sekunden</span> statt 3 Stunden
           </h1>
           
           <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
@@ -136,7 +136,7 @@ export default function LandingView({ onStart }) {
           <p style={{ fontSize: '0.85rem', color: 'var(--danger)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Das unerkannte Problem</p>
           <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>Der eigentliche Verlust <br/>passiert <span style={{ color: 'var(--danger)' }}>nach</span> der Messe.</h2>
           <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
-            Sie investieren Tausende Euro in teure Messestände und Marketing – und vergessen danach die Hälfte der wertvollen Kontakte.
+            Sie investieren Tausende Euro in teure Messestände und Marketing. Trotzdem werden viele wertvolle Kontakte nur zu spät oder gar nicht kontaktiert. Das sind potenziell verlorene Umsätze.
           </p>
         </div>
 
@@ -166,6 +166,26 @@ export default function LandingView({ onStart }) {
             </p>
           </div>
 
+        </div>
+      </div>
+
+      {/* Warum Leads AI Section */}
+      <div style={{ padding: '40px 24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: '800', margin: '0 0 32px', textAlign: 'center', letterSpacing: '-0.5px' }}>Warum Leads AI?</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          {[
+            { icon: "🧠", text: "Merkt sich jedes Gespräch und erstellt sofort das persönliche Follow-Up nach dem Gespräch." },
+            { icon: "✅", text: "Jeder Kontakt erhält garantiert eine Follow-Up Mail direkt nach dem Gespräch." },
+            { icon: "⚡️", text: "Dauert nur 60 Sekunden." },
+            { icon: "🤩", text: "Wirkt beeindruckend auf den potenziellen Kunden." },
+            { icon: "🛡", text: "Keine potenziellen Umsätze mehr verlieren." },
+            { icon: "📈", text: "Mehr ROI von Messen." }
+          ].map((item, i) => (
+            <div key={i} className="card glass" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', margin: 0 }}>
+              <div style={{ fontSize: '1.8rem' }}>{item.icon}</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '500', color: 'rgba(255,255,255,0.9)', lineHeight: '1.4' }}>{item.text}</div>
+            </div>
+          ))}
         </div>
       </div>
 
