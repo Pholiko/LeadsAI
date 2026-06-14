@@ -26,7 +26,7 @@ export default function LandingView({ onStart }) {
         zIndex: 100, 
         background: 'rgba(15, 23, 42, 0.75)', 
         backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(255,255,255,0.05)',
+        borderBottom: '1px solid var(--border-color)',
         boxShadow: '0 4px 30px rgba(59, 130, 246, 0.15)',
         padding: '16px 24px'
       }}>
@@ -50,11 +50,11 @@ export default function LandingView({ onStart }) {
 
           {/* Nav Links */}
           <div style={{ display: 'flex', gap: '24px', fontSize: '0.95rem', fontWeight: '500', alignItems: 'center' }}>
-            <a href="#start" onClick={(e) => { e.preventDefault(); scrollTo('start'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Start</a>
-            <a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Wie es funktioniert</a>
-            <a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>FAQ</a>
-            <a href="#pricing" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Pricing</a>
-            <a href="#login" onClick={(e) => { e.preventDefault(); onStart(); }} style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Login</a>
+            <a href="#start" onClick={(e) => { e.preventDefault(); scrollTo('start'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Start</a>
+            <a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Wie es funktioniert</a>
+            <a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>FAQ</a>
+            <a href="#pricing" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Pricing</a>
+            <a href="#login" onClick={(e) => { e.preventDefault(); onStart(); }} style={{ color: 'var(--text-primary)', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}>Login</a>
           </div>
         </div>
       </div>
@@ -78,8 +78,8 @@ export default function LandingView({ onStart }) {
           
           {/* CSS "Screenshot/Notification" Widget */}
           <div style={{ 
-              background: 'rgba(255, 255, 255, 0.05)', 
-              border: '1px solid rgba(255, 255, 255, 0.1)', 
+              background: 'var(--border-color)', 
+              border: '1px solid var(--border-color)', 
               borderRadius: '16px', 
               padding: '12px 16px', 
               marginBottom: '24px',
@@ -95,7 +95,7 @@ export default function LandingView({ onStart }) {
             </div>
             <div style={{ textAlign: 'left' }}>
               <p style={{ margin: '0 0 4px', fontSize: '0.85rem', fontWeight: 'bold' }}>Kontakt gesichert & E-Mail versendet</p>
-              <p style={{ margin: 0, fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)' }}>Thomas Müller, CEO NexaCorp</p>
+              <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Thomas Müller, CEO NexaCorp</p>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export default function LandingView({ onStart }) {
             Persönliche Follow-Ups auf Messen in <span style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>60 Sekunden</span> statt 3 Stunden
           </h1>
           
-          <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'rgba(255,255,255,0.7)', textAlign: 'left', lineHeight: '1.4' }}>
+          <p className="subtitle" style={{ fontSize: '1.1rem', marginBottom: '32px', color: 'var(--text-secondary)', textAlign: 'left', lineHeight: '1.4' }}>
             Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden.
           </p>
 
@@ -124,7 +124,7 @@ export default function LandingView({ onStart }) {
             style={{ 
               width: '100%', 
               borderRadius: '16px', 
-              boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1)', 
+              boxShadow: '0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--border-color)', 
               animation: 'slideUp 1s ease 0.2s backwards'
             }} 
           />
@@ -136,17 +136,17 @@ export default function LandingView({ onStart }) {
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <p style={{ fontSize: '0.85rem', color: 'var(--danger)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Das unerkannte Problem</p>
           <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>Der eigentliche Verlust <br/>passiert <span style={{ color: 'var(--danger)' }}>nach</span> der Messe.</h2>
-          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+          <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
             Sie investieren Tausende Euro in teure Messestände und Marketing. Trotzdem werden viele wertvolle Kontakte nur zu spät oder gar nicht kontaktiert. Das sind potenziell verlorene Umsätze.
           </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
           
-          <div className="card glass" style={{ borderTop: '3px solid rgba(255,255,255,0.1)', padding: '24px' }}>
+          <div className="card glass" style={{ borderTop: '3px solid var(--border-color)', padding: '24px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '16px' }}>💸</div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Teure Akquise</h3>
-            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
               Unternehmen geben Unmengen an Geld für Ausstellungen und Messen aus, um Leads zu generieren.
             </p>
           </div>
@@ -154,15 +154,15 @@ export default function LandingView({ onStart }) {
           <div className="card glass" style={{ borderTop: '3px solid var(--danger)', padding: '24px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '16px' }}>📉</div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Mangelhaftes Follow-Up</h3>
-            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
               Gesprächspartner werden im Nachhinein oft komplett vergessen oder viel zu spät kontaktiert.
             </p>
           </div>
 
-          <div className="card glass" style={{ borderTop: '3px solid rgba(255,255,255,0.1)', padding: '24px' }}>
+          <div className="card glass" style={{ borderTop: '3px solid var(--border-color)', padding: '24px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '16px' }}>🤝</div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Die Konkurrenz freut sich</h3>
-            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
               Jeder Kontakt ist potenzieller Umsatz. Fehlt das sofortige Follow-Up, wandert der Kunde zur schnelleren Konkurrenz.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function LandingView({ onStart }) {
           ].map((item, i) => (
             <div key={i} className="card glass" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '16px', margin: 0 }}>
               <div style={{ fontSize: '1.8rem' }}>{item.icon}</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '500', color: 'rgba(255,255,255,0.9)', lineHeight: '1.4' }}>{item.text}</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '500', color: 'var(--text-primary)', lineHeight: '1.4' }}>{item.text}</div>
             </div>
           ))}
         </div>
@@ -204,13 +204,13 @@ export default function LandingView({ onStart }) {
               <span style={{ fontSize: '1.5rem' }}>❌</span> Der alte Weg
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', marginBottom: '32px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '32px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📝</span> 50 Visitenkarten sammeln</div>
-              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid var(--border-color)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🏨</span> Abends im Hotel abtippen</div>
-              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid var(--border-color)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📊</span> In Excel & CRM übertragen</div>
-              <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(255,255,255,0.1)' }}>↓</div>
+              <div style={{ paddingLeft: '8px', borderLeft: '2px solid var(--border-color)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>✉️</span> Standard-Mails schreiben</div>
             </div>
             
@@ -227,7 +227,7 @@ export default function LandingView({ onStart }) {
               <span style={{ fontSize: '1.5rem' }}>⚡️</span> Mit Lead AI
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: '500', marginBottom: '32px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', color: 'var(--text-primary)', fontSize: '1rem', fontWeight: '500', marginBottom: '32px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>📸</span> Visitenkarte fotografieren</div>
               <div style={{ paddingLeft: '8px', borderLeft: '2px solid rgba(34, 197, 94, 0.3)' }}>↓</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><span>🎙</span> 10 Sekunden Kontext einsprechen</div>
@@ -253,21 +253,21 @@ export default function LandingView({ onStart }) {
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>1</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>Visitenkarte & Kontext</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Künstliche Intelligenz liest die Karte. Sie sprechen einfach kurz ein, worum es ging.</p>
-            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step1-card.jpg" alt="Visitenkarte scannen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>2</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>KI-Transkription</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Die Sprachnotiz wird fehlerfrei transkribiert. Sie können alles prüfen.</p>
-            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step2-transcript.jpg" alt="Transkription prüfen" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
           <div className="card glass" style={{ margin: 0, padding: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ background: 'var(--primary)', color: 'var(--text-primary)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '12px', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.5)' }}>3</div>
             <h3 style={{ margin: '0 0 8px', fontSize: '1rem' }}>E-Mail versenden</h3>
             <p style={{ margin: '0 0 16px', fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>Innerhalb von Minuten geht die personalisierte E-Mail an den Kunden raus.</p>
-            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
+            <img src="/step3-email.jpg" alt="Fertige E-Mail" style={{ width: '100%', maxWidth: '140px', borderRadius: '8px', border: '1px solid var(--border-color)', boxShadow: '0 4px 12px rgba(0,0,0,0.2)', marginTop: 'auto' }} />
           </div>
 
         </div>
@@ -383,7 +383,7 @@ export default function LandingView({ onStart }) {
           
         </div>
         
-        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center', fontSize: '0.8rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid var(--border-color)', textAlign: 'center', fontSize: '0.8rem' }}>
           &copy; {new Date().getFullYear()} Lead AI. Alle Rechte vorbehalten.
         </div>
       </footer>
