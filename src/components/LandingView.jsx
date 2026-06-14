@@ -17,7 +17,7 @@ export default function LandingView({ onStart }) {
   };
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: 'var(--bg-color)', overflowY: 'auto', paddingBottom: '40px' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', paddingBottom: '40px' }}>
       
       {/* Top Bar Navigation */}
       <div style={{ 
@@ -107,13 +107,7 @@ export default function LandingView({ onStart }) {
             Fotografieren. Kurz einsprechen. Persönliches Follow-Up in 60 Sekunden.
           </p>
 
-          <button 
-            className="btn-primary" 
-            onClick={onStart}
-            style={{ padding: '16px 24px', fontSize: '1.1rem', width: '100%', maxWidth: '250px', borderRadius: '12px', fontWeight: 'bold', boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)' }}
-          >
-            Jetzt App Starten
-          </button>
+
         </div>
 
         {/* Right Column: Hero Image / WOW Effect */}
@@ -134,8 +128,8 @@ export default function LandingView({ onStart }) {
       {/* Problem Awareness Section */}
       <div style={{ padding: '60px 24px 40px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <p style={{ fontSize: '0.85rem', color: 'var(--danger)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Das unerkannte Problem</p>
-          <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>Der eigentliche Verlust <br/>passiert <span style={{ color: 'var(--danger)' }}>nach</span> der Messe.</h2>
+          <p style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Das unerkannte Problem</p>
+          <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>Der eigentliche Verlust <br/>passiert <span style={{ color: 'var(--primary)' }}>nach</span> der Messe.</h2>
           <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
             Sie investieren Tausende Euro in teure Messestände und Marketing. Trotzdem werden viele wertvolle Kontakte nur zu spät oder gar nicht kontaktiert. Das sind potenziell verlorene Umsätze.
           </p>
@@ -151,7 +145,7 @@ export default function LandingView({ onStart }) {
             </p>
           </div>
 
-          <div className="card glass" style={{ borderTop: '3px solid var(--danger)', padding: '24px' }}>
+          <div className="card glass" style={{ borderTop: '3px solid var(--border-color)', padding: '24px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '16px' }}>📉</div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Mangelhaftes Follow-Up</h3>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
