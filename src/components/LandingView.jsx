@@ -83,8 +83,47 @@ export default function LandingView({ onStart }) {
         </div>
       </div>
 
+      {/* Problem Awareness Section */}
+      <div style={{ padding: '60px 24px 40px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--danger)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Das unerkannte Problem</p>
+          <h2 style={{ fontSize: '2rem', fontWeight: '800', margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>Der eigentliche Verlust <br/>passiert <span style={{ color: 'var(--danger)' }}>nach</span> der Messe.</h2>
+          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+            Sie investieren Tausende Euro in teure Messestände und Marketing – und vergessen danach die Hälfte der wertvollen Kontakte.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          
+          <div className="card glass" style={{ borderTop: '3px solid rgba(255,255,255,0.1)', padding: '24px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '16px' }}>💸</div>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Teure Akquise</h3>
+            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+              Unternehmen geben Unmengen an Geld für Ausstellungen und Messen aus, um Leads zu generieren.
+            </p>
+          </div>
+
+          <div className="card glass" style={{ borderTop: '3px solid var(--danger)', padding: '24px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '16px' }}>📉</div>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Mangelhaftes Follow-Up</h3>
+            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+              Gesprächspartner werden im Nachhinein oft komplett vergessen oder viel zu spät kontaktiert.
+            </p>
+          </div>
+
+          <div className="card glass" style={{ borderTop: '3px solid rgba(255,255,255,0.1)', padding: '24px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '16px' }}>🤝</div>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: '700' }}>Die Konkurrenz freut sich</h3>
+            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: '1.5', margin: 0 }}>
+              Jeder Kontakt ist potenzieller Umsatz. Fehlt das sofortige Follow-Up, wandert der Kunde zur schnelleren Konkurrenz.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
       {/* Process Section (Below the fold) */}
-      <div style={{ padding: '24px', marginTop: '24px' }}>
+      <div style={{ padding: '24px', marginTop: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%' }}>
         <p style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '16px' }}>So funktioniert's</p>
         
         <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', paddingLeft: '16px' }}>
