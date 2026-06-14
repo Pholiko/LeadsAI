@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function LandingView({ onStart }) {
   const [openFaq, setOpenFaq] = React.useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const faqs = [
     { q: "Wie genau funktioniert die KI-Transkription?", a: "Die KI erkennt den Text auf der Visitenkarte automatisch und verknüpft ihn mit Ihrer Sprachnotiz. Selbst bei Hintergrundgeräuschen auf der Messe ist die Erkennung hochpräzise." },
@@ -14,6 +15,12 @@ export default function LandingView({ onStart }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
+  };
+
+  const handleLogin = () => {
+    setMobileMenuOpen(false);
+    onStart();
   };
 
   return (
@@ -48,13 +55,59 @@ export default function LandingView({ onStart }) {
             Lead <span style={{ color: 'var(--primary)' }}>AI</span>
           </div>
 
-          {/* Nav Links */}
-          <div style={{ display: 'flex', gap: '8px', fontSize: '0.95rem', fontWeight: '500', alignItems: 'center' }}>
+          {/* Desktop Nav Links */}
+          <div className="nav-desktop" style={{ display: 'flex', gap: '8px', fontSize: '0.95rem', fontWeight: '500', alignItems: 'center' }}>
             <a href="#start" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('start'); }}>Start</a>
             <a href="#how-it-works" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }}>Wie es funktioniert</a>
             <a href="#faq" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }}>FAQ</a>
             <a href="#pricing" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }}>Pricing</a>
-            <a href="#login" className="nav-link" onClick={(e) => { e.preventDefault(); onStart(); }}>Login</a>
+            <a href="#login" className="nav-link" onClick={(e) => { e.preventDefault(); handleLogin(); }}>Login</a>
+          </div>
+
+          {/* Hamburger Button (mobile only) */}
+          <button 
+            className="hamburger-btn"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Menü"
+            style={{ 
+              background: 'none', border: 'none', cursor: 'pointer', padding: '4px',
+              display: 'flex', flexDirection: 'column', gap: '5px', width: '28px'
+            }}
+          >
+            <span style={{ 
+              display: 'block', height: '2px', background: 'var(--text-primary)', borderRadius: '2px',
+              transition: 'all 0.3s ease',
+              transform: mobileMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'
+            }} />
+            <span style={{ 
+              display: 'block', height: '2px', background: 'var(--text-primary)', borderRadius: '2px',
+              transition: 'all 0.3s ease',
+              opacity: mobileMenuOpen ? 0 : 1
+            }} />
+            <span style={{ 
+              display: 'block', height: '2px', background: 'var(--text-primary)', borderRadius: '2px',
+              transition: 'all 0.3s ease',
+              transform: mobileMenuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'
+            }} />
+          </button>
+        </div>
+
+        {/* Mobile Menu Panel */}
+        <div 
+          className="nav-mobile-panel"
+          style={{ 
+            maxHeight: mobileMenuOpen ? '300px' : '0',
+            overflow: 'hidden',
+            transition: 'max-height 0.3s ease',
+            maxWidth: '1200px', margin: '0 auto', width: '100%'
+          }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', paddingTop: '16px' }}>
+            <a href="#start" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('start'); }}>Start</a>
+            <a href="#how-it-works" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('how-it-works'); }}>Wie es funktioniert</a>
+            <a href="#faq" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('faq'); }}>FAQ</a>
+            <a href="#pricing" className="nav-link" onClick={(e) => { e.preventDefault(); scrollTo('pricing'); }}>Pricing</a>
+            <a href="#login" className="nav-link" onClick={(e) => { e.preventDefault(); handleLogin(); }}>Login</a>
           </div>
         </div>
       </div>

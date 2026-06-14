@@ -208,3 +208,26 @@ button:active {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Hamburger: hidden on desktop, visible on mobile */
+.hamburger-btn {
+  display: none !important;
+}
+
+.nav-mobile-panel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  
+  .hamburger-btn {
+    display: flex !important;
+  }
+
+  .nav-mobile-panel {
+    display: block;
+  }
+}
