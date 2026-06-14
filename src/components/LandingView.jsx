@@ -175,7 +175,7 @@ export default function LandingView({ onStart }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
           
           <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★☆</div>
             <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
               "Früher habe ich auf Messen oft den Überblick verloren. Heute scanne ich die Karte, spreche 10 Sekunden ein und die Mail ist noch am selben Abend beim Kunden!"
             </p>
@@ -372,7 +372,7 @@ export default function LandingView({ onStart }) {
           </div>
 
           <div className="card glass" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★★</div>
+            <div style={{ color: '#fbbf24', fontSize: '1.2rem', marginBottom: '16px', letterSpacing: '2px' }}>★★★★☆</div>
             <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: '1.6', marginBottom: '24px', flex: 1 }}>
               "Kein lästiges Abtippen mehr im Hotelzimmer. Ich habe jetzt nach langen Messetagen endlich wieder pünktlich Feierabend. Danke an das Team!"
             </p>
