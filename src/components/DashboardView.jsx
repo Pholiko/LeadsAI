@@ -72,9 +72,9 @@ export default function DashboardView({ onCaptureNew, onLogout }) {
         <h1 className="title" style={{ fontSize: '2rem', textAlign: 'center', margin: 0 }}>Lead AI</h1>
         <button 
           onClick={onLogout} 
-          style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: '0.85rem', width: '40px', textAlign: 'right' }}
+          style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '0.9rem', textAlign: 'right', fontWeight: '500' }}
         >
-          Logout
+          Zurück zur Webseite
         </button>
       </div>
 
@@ -86,7 +86,7 @@ export default function DashboardView({ onCaptureNew, onLogout }) {
           placeholder="Dein Name (für E-Mail Unterschrift)"
           style={{ 
             padding: '12px', borderRadius: '8px', border: '1px solid var(--border-color)', 
-            background: 'rgba(0,0,0,0.2)', color: 'white', fontSize: '1rem', width: '100%' 
+            background: 'var(--card-bg)', color: 'var(--text-primary)', fontSize: '1rem', width: '100%' 
           }}
         />
       </div>
@@ -99,25 +99,25 @@ export default function DashboardView({ onCaptureNew, onLogout }) {
       <div style={{ display: 'flex', gap: '8px', marginBottom: '16px', overflowX: 'auto', paddingBottom: '4px' }}>
         <button 
           onClick={() => setFilter('ALL')}
-          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid var(--border-color)', background: filter === 'ALL' ? 'var(--primary)' : 'rgba(0,0,0,0.2)', color: 'white', whiteSpace: 'nowrap' }}
+          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid var(--border-color)', background: filter === 'ALL' ? 'var(--primary)' : 'var(--card-bg)', color: filter === 'ALL' ? 'white' : 'var(--text-primary)', whiteSpace: 'nowrap' }}
         >
           Alle ({leads.length})
         </button>
         <button 
           onClick={() => setFilter('HOT')}
-          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #ef4444', background: filter === 'HOT' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(0,0,0,0.2)', color: 'white', whiteSpace: 'nowrap' }}
+          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #ef4444', background: filter === 'HOT' ? 'rgba(239, 68, 68, 0.1)' : 'var(--card-bg)', color: filter === 'HOT' ? '#ef4444' : 'var(--text-primary)', whiteSpace: 'nowrap' }}
         >
           🔥 Hot
         </button>
         <button 
           onClick={() => setFilter('WARM')}
-          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #f59e0b', background: filter === 'WARM' ? 'rgba(245, 158, 11, 0.3)' : 'rgba(0,0,0,0.2)', color: 'white', whiteSpace: 'nowrap' }}
+          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #f59e0b', background: filter === 'WARM' ? 'rgba(245, 158, 11, 0.1)' : 'var(--card-bg)', color: filter === 'WARM' ? '#f59e0b' : 'var(--text-primary)', whiteSpace: 'nowrap' }}
         >
           ☀️ Warm
         </button>
         <button 
           onClick={() => setFilter('COLD')}
-          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #3b82f6', background: filter === 'COLD' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(0,0,0,0.2)', color: 'white', whiteSpace: 'nowrap' }}
+          style={{ padding: '8px 16px', borderRadius: '20px', border: '1px solid #3b82f6', background: filter === 'COLD' ? 'rgba(59, 130, 246, 0.1)' : 'var(--card-bg)', color: filter === 'COLD' ? '#3b82f6' : 'var(--text-primary)', whiteSpace: 'nowrap' }}
         >
           ❄️ Cold
         </button>
@@ -187,12 +187,12 @@ export default function DashboardView({ onCaptureNew, onLogout }) {
                 </div>
 
                 {isExpanded && (
-                  <div style={{ marginTop: '12px', background: 'rgba(0,0,0,0.3)', padding: '16px', borderRadius: '8px' }}>
+                  <div style={{ marginTop: '12px', background: 'rgba(0,0,0,0.03)', padding: '16px', borderRadius: '8px' }}>
                     {isEditing ? (
                       <textarea
                         value={editContent}
                         onChange={(e) => setEditContent(e.target.value)}
-                        style={{ width: '100%', minHeight: '150px', background: 'rgba(0,0,0,0.2)', border: '1px solid var(--primary)', color: 'white', padding: '8px', borderRadius: '4px', fontFamily: 'monospace', fontSize: '0.9rem', marginBottom: '12px' }}
+                        style={{ width: '100%', minHeight: '150px', background: 'var(--card-bg)', border: '1px solid var(--border-color)', color: 'var(--text-primary)', padding: '8px', borderRadius: '4px', fontFamily: 'monospace', fontSize: '0.9rem', marginBottom: '12px' }}
                       />
                     ) : (
                       <div style={{ fontSize: '0.9rem', whiteSpace: 'pre-wrap', fontFamily: 'monospace', lineHeight: '1.4', marginBottom: '12px' }}>
