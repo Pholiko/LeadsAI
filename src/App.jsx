@@ -119,6 +119,16 @@ export default function App() {
             }}
           />
           <button type="submit" className="btn-primary">Entsperren</button>
+          <button 
+            type="button" 
+            className="btn-secondary" 
+            onClick={() => {
+              setPinInput('');
+              setShowLanding(true);
+            }}
+          >
+            Zurück zur Startseite
+          </button>
         </form>
       </main>
     );
