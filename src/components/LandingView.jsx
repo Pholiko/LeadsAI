@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LandingView({ onStart }) {
+export default function LandingView({ onStart, onShowLegal }) {
   const [openFaq, setOpenFaq] = React.useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
@@ -428,8 +428,8 @@ export default function LandingView({ onStart }) {
           <div style={{ flex: '1 1 150px' }}>
             <h4 style={{ color: '#f8fafc', marginBottom: '16px', fontWeight: 'bold' }}>Rechtliches</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Impressum</a></li>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Datenschutz</a></li>
+              <li><a href="#impressum" onClick={(e) => { e.preventDefault(); onShowLegal('impressum'); }} style={{ color: 'inherit', textDecoration: 'none' }}>Impressum</a></li>
+              <li><a href="#datenschutz" onClick={(e) => { e.preventDefault(); onShowLegal('datenschutz'); }} style={{ color: 'inherit', textDecoration: 'none' }}>Datenschutz</a></li>
             </ul>
           </div>
           

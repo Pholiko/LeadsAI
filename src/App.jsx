@@ -5,11 +5,13 @@ import DashboardView from './components/DashboardView'
 import LandingView from './components/LandingView'
 import { transcribeAudio, generateLead } from './services/openaiApi'
 import { saveLead } from './services/storage'
+import LegalView from './components/LegalView'
 
 export default function App() {
   const [showLanding, setShowLanding] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [pinInput, setPinInput] = useState('');
+  const [legalPage, setLegalPage] = useState(null); // 'impressum' or 'datenschutz'
   
   const [step, setStep] = useState(0); 
   // 0: Dashboard, 1: Camera, 2: Audio, 3: Transcribing Loading, 4: Edit Transcript, 5: Priority, 6: Processing
@@ -98,9 +100,13 @@ export default function App() {
     setShowLanding(true);
   };
 
+  if (legalPage) {
+    return <LegalView type={legalPage} onBack={() => setLegalPage(null)} />;
+  }
+
   if (!isAuthenticated) {
     if (showLanding) {
-      return <LandingView onStart={() => setShowLanding(false)} />;
+      return <LandingView onStart={() => setShowLanding(false)} onShowLegal={(type) => setLegalPage(type)} />;
     }
 
     return (
