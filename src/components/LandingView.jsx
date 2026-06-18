@@ -413,15 +413,15 @@ export default function LandingView({ onStart }) {
               </svg>
               Lead <span style={{ color: 'var(--primary)' }}>AI</span>
             </div>
-            <p style={{ margin: 0, lineHeight: '1.5' }}>Nie wieder Messekontakte verlieren.<br/>Schnelles und personalisiertes Follow-Up.</p>
+            <p style={{ margin: 0, lineHeight: '1.5', color: '#cbd5e1' }}>Nie wieder Messekontakte verlieren.<br/>Schnelles und personalisiertes Follow-Up.</p>
           </div>
 
           <div style={{ flex: '1 1 150px' }}>
             <h4 style={{ color: '#f8fafc', marginBottom: '16px', fontWeight: 'bold' }}>Produkt</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a></li>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a></li>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Use Cases</a></li>
+              <li><a href="#how-it-works" style={{ color: 'inherit', textDecoration: 'none' }}>So funktioniert's</a></li>
+              <li><a href="#pricing" style={{ color: 'inherit', textDecoration: 'none' }}>Pricing</a></li>
+              <li><a href="#faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a></li>
             </ul>
           </div>
 
@@ -430,14 +430,13 @@ export default function LandingView({ onStart }) {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Impressum</a></li>
               <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Datenschutz</a></li>
-              <li><a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>AGB</a></li>
             </ul>
           </div>
           
         </div>
         
-        <div style={{ maxWidth: '1000px', margin: '40px auto 0', paddingTop: '24px', borderTop: '1px solid var(--border-color)', textAlign: 'center', fontSize: '0.8rem' }}>
-          &copy; {new Date().getFullYear()} Lead AI. Alle Rechte vorbehalten.
+        <div style={{ maxWidth: '1000px', margin: '40px auto 0', textAlign: 'center', color: 'rgba(248, 250, 252, 0.4)' }}>
+          &copy; 2026 Lead AI. Alle Rechte vorbehalten.
         </div>
       </footer>
     </div>
